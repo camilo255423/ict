@@ -1,0 +1,2845 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\lang spanish
+Framework multiplataforma para móviles
+\end_layout
+
+\begin_layout Author
+
+\lang spanish
+Ing.
+ MSc.
+ Camilo Rodríguez Ing.
+ Héctor Enríquez
+\end_layout
+
+\begin_layout Abstract
+
+\lang spanish
+El presente documento
+\end_layout
+
+\begin_layout Keywords
+
+\lang spanish
+Framework, dispositivos móviles, aplicaciones nativas, aplicaciones web,
+ aplicaciones híbridas
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Introducción
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Actualmente uno de los principales problemas que enfrentan los desarrolladores
+ de aplicaciones para dispositivos móviles es la necesidad de desarrollar
+ una versión diferente de la aplicación para cada una de las plataformas
+ móviles existentes: Android, Iphone, Hewlette Packard, Windows Phone.
+ En los últimos años han comenzado a aparecer frameworks que permiten desarrolla
+r la aplicación una vez y generarla automáticamente para cada una de las
+ plataformas.
+ Han aparecido varias alternativas y aún se encuentran en étapa de desarrollo
+ muchas de estas, siendo este un campo aún muy reciente.En muchas ocasiones
+ se no se sabe cual usar o incluso si se debe usar o no una de estas herramienta
+s.
+ Por esta razón este documento se propone hacer una breve revisión y explicación
+ de estas nuevas tecnologías describiendo caracteristicas, arquitecturas
+ , ventajas y desventajas.
+ Este documento se encuentra organizado de la siguiente forma
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Frameworks de desarrollo de aplicaciones multiplataforma para dispositivos
+ móviles
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Frameworks-de-desarrollo"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Un framework provee una serie de estructuras de dominio y funcionalidad
+ específica basada en patrones.
+ Los patrones codifican un diseño reutilizable de soluciones ya conocidas
+ a problemas de software de determinados contextos y dominios.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "citeulike:4633645"
+
+\end_inset
+
+.
+ Los Frameworks permiten alta productividad, menor tiempo de desarrollo
+ y mayor calidad en las aplicaciones
+\begin_inset CommandInset citation
+LatexCommand cite
+key "citeulike:4633645"
+
+\end_inset
+
+.
+ Un dominio particular es la creación de código reutilizable en cualquier
+ plataforma de hardware/software.
+ La creciente diversidad de arquitecturas de harware y de software , sistemas
+ operativos, y plataformas de comunicaciones hacen difícil la implementación
+ de manera directa
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fayad:1999:BAF:326112"
+
+\end_inset
+
+.
+ En este dominio de aplicación se ubican las aplicaciones para dispositivos
+ móviles, debido a que cada dispositivo tiene un arquitectura de hardware
+ y software específica, y un lenguaje de programación diferente (a manera
+ de ilustración se presentan algunas de los sistemas operativos más comunes
+ para dispositivos móviles y su respectivo lenguaje de desarrollo en la
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Lenguajes-de-Programación"
+
+\end_inset
+
+).
+ En el caso de los framework multiplataforma para dispositivos móviles,
+ lo que se busca es la reutilización de código en tiempo de compilación.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename charland_table.png
+	scale 70
+	BoundingBox 0bp 0bp 420bp 210bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Lenguajes-de-Programación"
+
+\end_inset
+
+Lenguajes de Programación para algunos Sistemas Operativos para Móviles
+ , tomado de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Charland:2011:MAD:1966989.1968203"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Existen 3 maneras de desarrollar una aplicación para dispositivos móviles:
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Desarrollar una aplicación web que se ejecute en el navegador del dispositivo
+ móvil.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Desarrollar una aplicación en código nativo para cada plataforma para lo
+ cual se debe utilizar un lenguaje y una herramienta de desarrollo particular
+ para cada caso tal como se presenta en la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Lenguajes-de-Programación"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Desarrollar una aplicación híbrida, la cual es una combinación de aplicación
+ web y aplicación nativa.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+La primera aproximación tiene la ventaja que la aplicación se ejecuta en
+ el navegador de cada dispositivo haciéndola independiente de plataforma.
+ El desarrollador crea una única versión utilizando html y javascript como
+ cualquier otra aplicación web que se ejecuta en el lado del cliente.
+ Sin embargo, tiene como desventajas que nos todos los controles Html funcionan
+ de la misma manera en todos los disposivitos para móviles ni tampoco las
+ dimensiones de los componentes de la aplicación se ajustan de manera correcta
+ a las pantallas de los dispositivos.
+ Además, la aplicación no puede hacer uso de recursos de software y hardware
+ del dispositivo móvil como cámara, programas, archivos y componentes del
+ sistema.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+La segunda aproximación tiene la ventaja de que al desarrollar específicamente
+ para una plataforma se pueden utilizar todos los recursos del sistema operativo
+ y del dispositivo, además de usar todos los controles específicos para
+ dicho dispositivo.
+ La desventaja es que el desarrollador debe crear una versión de la aplicación
+ para cada plataforma.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Las aplicaciones híbridas utilizan ambas ideas.
+ Si bien se desarrolla una versión en codigo nativo para cada plataforma,
+ el desarrollo se realiza utilizando código Html y lenguaje Javascript como
+ si fuera una aplicación Web.
+ Sin embargo, el framework es el que se encarga de transformar la aplicación
+ en código específico para cada plataforma.
+ La figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparación-entre-las"
+
+\end_inset
+
+ presenta una breve comparación entre los tipos de desarrollo.
+ La revisión de este tipo de framework, el cual permite la generación de
+ código nativo específico apartir componentes de de software reutilizable
+ en un lenguaje independiente de plataforma, es el objetivo de este trabajo.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename comparacion.png
+	lyxscale 50
+	scale 35
+	BoundingBox 0bp 0bp 1024bp 500bp
+	clip
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparación-entre-las"
+
+\end_inset
+
+Comparación entre las diferentes estrategias de desarrollo para dispositivos
+ móviles 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bakker2011"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Características de los Frameworks existentes
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Se eligieron los frameworks a estudiar basado en dos aspectos: Primero,
+ que el framework permita generar aplicaciones para varias plataformas,
+ y segundo que la aplicación sea híbrida, de tal manera que se pueda generar
+ una aplicación móvil como tal y no una aplicación web.
+ Los frameworks seleccionados generan aplicaciones para al menos 4 plataformas
+ diferentes.
+ Estos frameworks son: PhoneGap, Rhodes, AplicationCraft
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Se explican brevemente las características, la arquitectura, los sitemas
+ operativos y dispositivos soportador y las herramientas de desarrollo.
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+PhoneGap
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:PhoneGap:"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+PhoneGap se desarrolló originalmente por la empresa Nitobi en 2011 y fue
+ adquirido posteriormente por Adobe, liberando el código bajo el proyecto
+ Apache Cordova.
+ En otras palabras , el producto que pertenece a Adobe se denomina actualmente
+ PhoneGap y el proyecto de código abierto se denomina Cordova.
+ Varios de los framework descritos en este documento utilizan Cordova.
+ El objetivo de este framework es permitir desarrollar aplicaciones embebidas
+ en código nativo utilizando exclusivamente código html5 y Javascript.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ghatol:2012:BPM:2331456"
+
+\end_inset
+
+.
+ Phone Gap Build ofrece varios tipos de plan pagos.
+ Debido a qué el código se compila a través de gitHub , el derecho a que
+ el código sea privado depende del precio del plan.
+ La versión gratuita permite una sola aplicación privada y la paga va desde
+ 120 a 900 por año, dependiendo del número de aplicaciones.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang spanish
+Arquitectura
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename ../cordova_fig1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+Arquitectura Cordova
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arquitectura-Cordova"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename arq_phone.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+Arquitectura PhoneGap
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arquitectura-PhoneGap"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bakker2011"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Cordova está compuesto por un API en javascript y un API en código nativo
+ para cada uno de los sistemas operativos que soporta (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arquitectura-Cordova"
+
+\end_inset
+
+).
+ La aplicación se ejecuta en un componente denominado webview, el cual contiene
+ el la aplicación desarrollada en html5 y javascript la cual se comunica
+ que con el API javascript de Cordova.
+ Este a su vez se comunica con el API de código nativo.
+ Esto implica que cada aplicación se debe recompilar para cada sistema operativo
+ con su respectivo API.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang spanish
+Sistemas operativos y dispositivos soportados
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename phonegap_caracterбsticas.PNG
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+Características y Sistemas operativos soportados por PhoneGap
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phonegapsite"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang spanish
+Herramientas de desarrollo
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+PhoneGap dispone de 2 opciones de desarrollo: Una en línea a través del
+ sitio PhoneGap Build y la otra usando los respectivos IDE de desarrollo
+ para cada una de las plataformas de los sistemas operativos.
+ En el primer caso, la aplicación se desarrolla en Html5 y Javascript ubicando
+ el código del repositorio GitHub.
+ A partir de este , PhoneGap build se conecta y genera la aplicación para
+ los distintos sistemas operativos.
+ Para la segunda opción se debe descargar las distintas bibliotecas nativas
+ de phonegap, y desarrollar con las respectivas herramientas de desarrollo.
+ Por ejemeplo, para Android se necesitan las bibliotecas phoneGap para android,
+ el sdk de android , el emulador y un IDE de desarrollo como eclipse.
+ Para IPhone se utiliza, las librerías phoneGap para IPhone, el sdk y XProject
+ como IDE de desarrollo.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Recientemente se ha desarrollado un plugin para recibir notificaciones(push
+ notifications) , sin embargo el desarrollo está en pruebas y solo funciona
+ para los sistemas Android y IOS.
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Rhodes
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Rhodes es un framework de código abierto desarrollado por Rhomobile en diciembre
+ de 2008
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Allen:2010:PSC:1869934"
+
+\end_inset
+
+ y adquirido por Motorola en julio de 2011.
+ La principal característica de este framework es que se desarrolla en Html5,
+ Javascript y Ruby siguiendo la filosofía de la arquitectura MVC(Modelo-Vista-Co
+ntrolador) utilizada en Ruby on Rails.
+ Las vistas, es decir la interfaz de la aplicación, se generan utilizando
+ html5, javascript y ERB(Embedded Ruby), tal y como se generan páginas utilizand
+o lenguajes del lado del servidor con PHP o JSP.
+ Las solicitudes del cliente se procesan por medio de controladores y el
+ acceso a datos por medio de los modelos
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Allen:2010:PSC:1869934"
+
+\end_inset
+
+.
+ El código generado es ruby byte code el cual se ejecuta sobre una máquina
+ virtual de Ruby (ver figura
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arquitectura-Rhodes-"
+
+\end_inset
+
+) .
+ Si bien Rhodes se puede descargar de manera gratuita, Motorola también
+ ofrece una versión empresarial con soporte que cuesta $500 y el servidor
+ Rhode RhoSync, el cual se explica en la sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Características-Adicionales"
+
+\end_inset
+
+, $ 5000 por 100 usuarios conectados.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename rhodes-framework.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arquitectura-Rhodes-"
+
+\end_inset
+
+Arquitectura Rhodes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rhodesarq"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang spanish
+Sistemas operativos soportados y Dispositivos soportados
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{ |p{2.5cm} | l |l |l |l |l | }     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     
+\backslash
+textbf{Dispositivo - SO} & 
+\backslash
+textbf{iPhone} & 
+\backslash
+textbf{Android} & 
+\backslash
+textbf{RIM} & 
+\backslash
+textbf{Windows Mobile} & 
+\backslash
+textbf{Windows Phone 7}
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     contactos & x & x & x & x & x 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     calendario & x & x & x & x & x 
+\backslash
+
+\backslash
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     cámara  & x & x & x & x & x 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     timer  & x & x & x & x & x 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     Rotación de la pantalla  & x & x & x & x & x 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     Push Notifications  & x & x & x & x & x 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+Características y Sistemas operativos soportados por Rhodes
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rhodesdevices"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang spanish
+Herramientas de desarrollo
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Al igual que PhoneGap Rhodes dispone de una aplicación para compilar en
+ línea denominada RhodeHub.
+ También ofrece una versión de eclipse modificada para el uso de Rhodes
+ denominada RhodesStudio con la cual se puede generar una aplicación para
+ cualquier sistema operativo que soporta este framework
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang spanish
+Características Adicionales 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Características-Adicionales"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Rhode Sync es un servidor que le permite a la aplicación móvil acceder a
+ cualquier servicio de la red, de tal forma que los datos se puedan accder
+ de manera transparente como si estuvieran localmente.
+ El servidor RhoSync actúa como capa intermedia entre la aplicación móvil
+ y el servicio web el cual accede a los datos remotos.
+ El servidor RhoSync almacena informacióndesde el back-mend del sistema
+ como tripletas (OAV) objeto -atributo-valor capaz de representar cualquier
+ dato
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Allen:2010:PSC:1869934"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Application Craft
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Este framework utiliza el código de PhoneGap-Cordova explicado en la sección
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:PhoneGap:"
+
+\end_inset
+
+de este documento.
+ Este framework solo ofrece una versión para compilar en línea la cual cuesta
+ $ 14 por mes, y una versión empresarial descargable.
+ SIn embargo la versión en línea ofrece un entorno gráfica de desarrollo
+ para Html5 y javascript, no solo para el proceso de compilación como es
+ el caso de PhoneGap Build.
+ 
+\end_layout
+
+\begin_layout Subsection
+WORKLIGHT 
+\end_layout
+
+\begin_layout Standard
+Es un Framework para el desarrollo de aplicaciones para dispositivos móviles
+ desarrollado por IBM, el cual se compone de cuatro componentes principales,
+ IBM Worklight Studio el cual corresponde a un entorno de desarrollo basado
+ en Eclipse, IBM Worklight Device Runtime Components permite tener facilidad
+ en el tiempo de ejecución del aplicativo desarrollado en el componente
+ de Hardware (dispositivo móvil), IBM Worklight Server corresponde al servidor
+ utilizado por el framework el cual está basado en Java e IBM Worklight
+ Console, herramienta catalogada como interfaz de usuario que permite controlar
+ la totalidad de las aplicaciones móviles.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Arquitectura 
+\end_layout
+
+\begin_layout Standard
+IBM Worklight funciona bajo la arquitectura Apache Cordova, facilitando
+ el desarrollo de aplicaciones nativas mediante el uso de tecnologías como
+ HTML 5, CSS y JavaScript.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Imagenes/WorklightArquitectura.jpg
+	lyxscale 50
+	scale 50
+	BoundingBox 0bp 0bp 637bp 483bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Arquitectura Worklight 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IBMWorklight"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El framework en mención está desarrollado para operar en ambiente Windows
+ y Linux, dentro de lo que se destacan tres alternativas para ser adquiridas,
+ las cuales no son de acceso gratuito.
+\end_layout
+
+\begin_layout Subsubsection
+Sistemas Operativos y dispositivos soportados 
+\end_layout
+
+\begin_layout Standard
+Los desarrollos en Worklight cuentan con soporte para los sistemas operativos
+ iOS, Android, Blackberry y Windows Phone.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Herramientas de desarrollo 
+\end_layout
+
+\begin_layout Standard
+En su estructura administra archivos comunes para los sistemas operativos
+ que soportan las aplicaciones desarrolladas bajo este framework, estos
+ archivos se almacenan en una carpeta llamada “common”, y cuenta además
+ con archivos propios para cada Sistema Operativo, los cuales se almacenan
+ en carpetas que tienen el nombre del S.O.
+ relacionado, por ejemplo la carpeta que administra los archivos para el
+ desarrollo bajo iOS se denomina iphone y de esta manera para todos los
+ S.O.
+ soportados.
+ Tiene como elementos complementarios un posible apoyo en herramientas como
+ JQuery para móviles (JQuery Mobile), Secha Touch y Dojo también para móviles
+ (Dojo Mobile).
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Características adicionales 
+\end_layout
+
+\begin_layout Standard
+Cuenta con manejo de notificaciones para las API de los dispositivos móviles
+ y Apple push notification.
+ Costo Dichas alternativas tienen un costo de 163 dólares, 38400 dólares
+ y 168000 dólares (con disponibilidad para ambas plataformas).
+ Cuentan a su vez con una versión de prueba gratuita la cual es denominada
+ Worklight Develop Edition 5.0, es reconocida como una versión de evaluación
+ que busca ser retroalimentada por los usuarios a IBM de manera directa.
+\end_layout
+
+\begin_layout Subsection
+MOSYNC
+\end_layout
+
+\begin_layout Standard
+Este framework permite desarrollar aplicaciones que se ejecutan en dispositivos
+ móviles el cual está separado por dos categorías a saber, el SDK y el Reload.
+\end_layout
+
+\begin_layout Subsubsection
+Arquitectura
+\end_layout
+
+\begin_layout Standard
+MoSync cuenta con características básicas de la arquitectuda Apache Cordova,
+ pero tiene un salto para permitir la interacción con el lenguaje C/C++,
+ buscando facilitar las aplicaciones híbridas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Imagenes/MoSync Architecture.png
+	lyxscale 50
+	scale 50
+	BoundingBox 0bp 0bp 1024bp 500bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Arquitectura de MoSync 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MoSyncArchitecture"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dentro de las características propias de la arquitectura, se puede hacer
+ referencia en la imagen a la sección llamada VM Core, esta corresponde
+ a una Máquina Virtual, que permite leer, ejecutar e interpretar de manera
+ directa el código en bytes directo con que cuenta el Framework MoSync.
+ 
+\end_layout
+
+\begin_layout Standard
+La capa de servicios incluye los archivos de entrada y salida, así como
+ el manejo de hilos o hebras, trabajo de red, administración de memoria
+ y en general las operaciones propias de soporte al desarrollo de aplicaciones.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Sistemas Operativos y dispositivos soportados
+\end_layout
+
+\begin_layout Standard
+Permite compilar las aplicaciones en nueve plataformas distintas, Moblin,
+ Blackberry, Windows Phone, Windows, iOS, Android, Java, Meego y Symbian;
+ estas plataformas utilizan el mismo código base del framework, lo cual
+ minimizaría los ajustes en el aplicativo buscando mayor cubrimiento en
+ los usuarios.
+ En la versión MoSync Reload, se utilizan las tecnologías de los lenguajes
+ HTML 5 y JavaScript, lo cual basa sus elementos de portabilidad en tres
+ plataformas (iOS, android y Windows Phone), y también permite la utilización
+ de muchas características de los dispositivos móviles tales como cámara,
+ ubicación y contactos.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Herramientas de desarrollo
+\end_layout
+
+\begin_layout Standard
+Permite trabajar aplicaciones en los lenguajes HTML 5, CSS, JavaScript y
+ C/C++.
+ Con la versión SDK (Software Development Kit) facilita la creación de aplicacio
+nes mutiplataforma utilizando las tecnologías de los lenguajes C/C++ o HTML
+ 5/JavaScript, aunque también permite crear aplicaciones híbridas combinando
+ las prestancias de los lenguajes mencionados previamente.
+\end_layout
+
+\begin_layout Subsubsection
+Características adicionales
+\end_layout
+
+\begin_layout Standard
+El costo de este framework es libre, lo que permite que exista suficiente
+ información relacionada con el desarrollo y que pueda ser utilizado de
+ manera masiva, evento que genera una oportunidad de masificación del framework.
+ 
+\end_layout
+
+\begin_layout Standard
+En la siguiente tabla se presenta una comparación de las características
+ básicas de funcionamiento de MoSync.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Capacidad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reload
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SDK
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HTML 5/JavaScrip
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cambio rápido de JavaScript/HTML
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Depuración JavaScript
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inspección
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Depuración completa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uso de editor externo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Es posible
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IDE basado en Eclipse
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aplicaciones nativas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sistemas operativos soportados
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Windows, iOS X Linux
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Windows, iOS X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Comparación de versiones de MoSync
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+CODENAME ONE
+\end_layout
+
+\begin_layout Standard
+Codename one es un framework perteneciente a la empresa que lleva el mismo
+ nombre.
+ Este framework permite el desarrollo de aplicaciones multiplataforma y
+ ofrece la posibilidad de crear aplicaciones nativas, a diferencia de otros
+ frameworks explicados en este documento, como Phonegap.
+ Las aplicaciones son desarrolladas en lenguaje java utilizando un plugin
+ para los IDE netbeans o eclipse, y convertidas a código para Dalvik en
+ Android, MIDP+JSR's en J2ME, RIM API en Blackberry, Objective C en iOS
+ y C# en Windows Phone 7.
+\end_layout
+
+\begin_layout Subsubsection
+Arquitectura
+\end_layout
+
+\begin_layout Standard
+Una de las principales características de este framework es la utilización
+ de su tecnología desde la nube.
+ .
+ El código resultante se compila en los servidores propios de la empresa
+ dentro del contexto de la nube y el resultado es un producto portable que
+ permite su ejecución en distintas plataformas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Imagenes/CodenameOne Architecture.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Mecanismo de compilación de Codename One 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CODENAMEONEARCH"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sistemas Operativos y dispositivos soportados
+\end_layout
+
+\begin_layout Standard
+El producto resultante después de la compilación del aplicativo puede ser
+ ejecutado en iOS, Android, Windows Phone y Blackberry.
+\end_layout
+
+\begin_layout Subsubsection
+Herramientas de desarrollo
+\end_layout
+
+\begin_layout Standard
+Este framework permite escribir las aplicaciones con Java, utilizando netbeans
+ o eclipse.
+ Como se mencionó anteriormente, no propone el uso de HTML 5 como muchas
+ otras alternativas con características similares.
+ Cuenta con una API Java especial para Codename One para soportar aspectos
+ de interfaz en las aplicaciones, además de permitir la compilación de los
+ archivos en los servidores empresariales, essto es posible por la existencia
+ de un plugin que envía los archivos a dicho servidor desde netbeans o eclipse.
+\end_layout
+
+\begin_layout Subsubsection
+Características adicionales
+\end_layout
+
+\begin_layout Standard
+Las herramientas para desarrollar son totalmente libres, pero hay que pagar
+ un costo para la compilación de aplicaciones nativas de forma ilimitada;
+ este costo es de 9 dólares por mes; esto es debido a que la empresa argumenta
+ el derecho al uso de los servidores de la organización.
+ El framework no es aconsejable para aplicaciones con interfaces sofisticadas
+ ya que no soporta visualización en formato 3D.
+\end_layout
+
+\begin_layout Subsection
+AMPCHROMA
+\end_layout
+
+\begin_layout Standard
+Antenna Software es la empresa que desarrolla este framework.
+ De acuerdo con esta organización, su producto ha estado seleccionado como
+ líder en plataformas para desarrollo de aplicaciones móviles (esto de acuerdo
+ con 
+\begin_inset Quotes eld
+\end_inset
+
+Gartner's Magic Quadrant
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+AMP significa Antenna Mobility Platform y su framework incluye características
+ de integración de aplicativos existentes como CRM (Customer Relationship
+ Management) y ERP (Enterprise Resourcing Planning), lo que ofrece una caracterí
+stica propia a este producto.
+ Es una herramienta orientada hacia las necesidades de negocios.
+\end_layout
+
+\begin_layout Subsubsection
+Arquitectura
+\end_layout
+
+\begin_layout Standard
+Para la construcción de los aplicativos, este framework tiene cuatro módulos
+ base, el llamado AMP Studio que es el conjunto de herramientas para el
+ desarrollo de aplicaciones nativas, está el AMP Client donde se escribe
+ cualquier tipo de aplicación por una sola vez (web, nativa, híbrida); el
+ AMP Server facilita el acceso de usuarios móviles a sistemas empresariales
+ y ofrece mensajes con conexión segura a la aplicación ofreciendo servicios
+ gateway y finalmente el AMP Manager el cual es una consola basada en servicios
+ web donde se permite la administración y el control de manera remota a
+ aplicaciones, dispositivos, usuarios y contenidos.
+\end_layout
+
+\begin_layout Standard
+Utiliza la tecnología JQuery, Sercha y Dojo Mobile como elementos de soporte
+ y entrada a su arquitectura.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Imagenes/AMPchroma Architecture.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modelo de funcionamiento del AMP Chroma 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AMPChromaArc"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sistemas Operativos y dispositivos soportados
+\end_layout
+
+\begin_layout Standard
+Este framework es compatible con Android y con iOS
+\end_layout
+
+\begin_layout Subsubsection
+Herramientas de desarrollo
+\end_layout
+
+\begin_layout Standard
+El desarrollo está basado en el uso de HTML 5, JavaScript, CSS, JQuery Mobile,
+ Sencha Touch y Dojo Mobile.
+\end_layout
+
+\begin_layout Subsubsection
+Características adicionales
+\end_layout
+
+\begin_layout Standard
+Dentro de los elementos que caracterizan esta framework, se incluyen los
+ metadatos para las transacciones, vista de páginas y la posibilidad de
+ generación de estadísticas a través del módulo AMP Manager.
+\end_layout
+
+\begin_layout Section
+compración entre los frameworks
+\end_layout
+
+\begin_layout Standard
+De acuerdo con lo analizado se puede establecer algunos elementos diferenciadore
+s para cada framework, los cuales se clasifican en Debilidades, Oportunidades,
+ Fortalezas y Amenazas.
+ Esta serie de condiciones pueden permitir establecer criterios de selección
+ en el momento de elegir una herramienta para el desarrollo en dispositivos
+ móviles.
+\end_layout
+
+\begin_layout Subsubsection
+Phonegap
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="9cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size large
+PHONEGAP
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DEBILIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El servicio de notificaciones está limitado a Andriod y a iOS 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OPORTUNIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aprovecha de manera extensa los servicios y utilidades de los dispositivos
+ móviles así como de las plataformas de desarrollo 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMENAZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Precio variable de acuerdo al número de aplicaciones, evento que puede disminuir
+ el interés por el producto 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FORTALEZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dueño de la arquitectura cordova, elemento en el que se basan otros frameworks,
+ lo que lo hace pionero en arquitectura
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+DOFA para Phonegap
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Rhodes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="9cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size large
+RODES
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DEBILIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OPORTUNIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Generar las aplicaciones con Ruby hace que la tecnología de las mismas sea
+ igual a la empleada en los procesos cliente servidor como los sitios web
+ desarrollados en PHP o JSP, esto puede generar credibilidad en el desarrollador
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FORTALEZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maneja un tipo de arquitectura clásica que ha sido demostrada en distintos
+ escenarios tecnológicos (Modelo Vista Controlador) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMENAZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Versión empresarial con costo, lo cual puede minimizar la cantidad de usuarios
+ que se inclinen por el aprendizaje de este servicio 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+DOFA para Rhodes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Application Craft
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="9cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+APPLICATION CRAFT
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DEBILIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+La versión descargable no tiene entorno gráfico para el desarrollo con HTML
+ 5 y JavaScript 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OPORTUNIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Usa la arquitectura cordova, evento que le puede generar respaldo 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FORTALEZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+La versión en línea ofrece un entorno gráfico de desarrollo para HTML 5
+ y JavaScript 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMENAZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Costo de compilación mensual, lo cual reduce el número de posibles interesados
+ en este framework 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+DOFA para Application Craft
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Worklight
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="9cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+WORKLIGHT
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DEBILIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+La versión libre del Framework es una versión beta que está en constante
+ retroalimentación para mejorar las versiones pagas 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OPORTUNIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Respaldo de una casa de tecnología con mucha trayectoria (IBM), lo que genera
+ confianza al desarrollador y al usuario 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FORTALEZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquitectura robusta (Apache cordova), multiplataforma y manejo de lenguajes
+ HTML 5, CSS y JavaScript 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMENAZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alto costo de adquisición de las versiones más sofisticadas, reduce la cantidad
+ de personas que utilizan el framework por ende la masificación del mismo
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+DOFA para Worklight
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+MoSync
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="9cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+MOSYNC
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DEBILIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OPORTUNIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cobertura amplia en el desarrollo de aplicaciones debido a la clasificación
+ de tecnologías dentro del SDK y el Reload 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FORTALEZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Manejo de lenguaje JavaScript, HTML 5, CSS y C/C++ permite más opciones
+ en la programación de aplicativos 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMENAZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Manejo de dos versiones de framework, puede crear confusión en los usuarios
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+DOFA para MoSync
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Codename One
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="9cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+CODENAME ONE
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DEBILIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No manejar el lenguaje HTML 5, lo que reduce el tipo de aplicaciones a desarroll
+arse 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OPORTUNIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compilación bajo servidores de la nube, lo que hace mucho más rápida la
+ generación de ejecutables 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FORTALEZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Estandarización del lenguaje java, que facilita la portabilidad de los aplicativ
+os 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMENAZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Costo para compilar aplicaciones, puede reducir el uso del framework 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+DOFA para Codename One
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+AMP Chroma
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="9cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+AMP CHROMA
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DEBILIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Herramienta orientada para las soluciones empresariales, lo que minimiza
+ su utilización y no pasa a ser herramienta para la investigación 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OPORTUNIDADES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Integración con aplicativos empresariales existentes (CRM ERP) lo cual puede
+ ser benéfico para las empresas que busquen controlar y administrar su informaci
+ón a través de dispositivos móviles 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FORTALEZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cuatro módulos para la gestión de contenidos empresariales donde cuentan
+ con un sistema de seguridad de los datos 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AMENAZAS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Demasiada información empresarial y de logros (no documentada) y poca informació
+n técnica lo que puede afectar la selección como herramienta de desarrollo
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+DOFA para AMP Chroma
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusiones y trabajo futuro
+\end_layout
+
+\end_body
+\end_document

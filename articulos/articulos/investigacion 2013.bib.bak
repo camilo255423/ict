@@ -1,0 +1,631 @@
+% This file was created with JabRef 2.7b.
+% Encoding: Cp1252
+
+@BOOK{Allen:2010:PSC:1869934,
+  title = {Pro Smartphone Cross-Platform Development: iPhone, Blackberry, Windows
+	Mobile and Android Development and Distribution},
+  publisher = {Apress},
+  year = {2010},
+  author = {Allen, Sarah and Graupera, Vidal and Lundrigan, Lee},
+  address = {Berkely, CA, USA},
+  edition = {1st},
+  abstract = {Learn the theory behind cross-platform development, and put the theory
+	into practice with code using the invaluable information presented
+	in this book. With in-depth coverage of development and distribution
+	techniques for iPhone, BlackBerry, Windows Mobile, and Android, youll
+	learn the native approach to working with each of these platforms.
+	With detailed coverage of emerging frameworks like PhoneGap and Rhomobile,
+	youll learn the art of creating applications that will run across
+	all devices. Youll also be introduced to the code-signing process
+	and the distribution of applications through the major application
+	stores, including RIM, Apple, and Microsoft. What youll learn How
+	to develop native applications on the leading mobile platforms including
+	iPhone, BlackBerry, Windows Mobile, and Android How to extend native
+	applications to run across all mobile platforms using cross-platform
+	mobile toolkits such as Rhomobile and PhoneGap. Best practices with
+	full end-to-end samples in native code for each mobile platform How
+	to distribute applications through each of the major mobile application
+	stores (RIM, Apple, and Microsoft) Who this book is for Developers
+	who are interested in creating cross-platform mobile applications
+	will find invaluable information in this book. The text is geared
+	toward developers who have developed in any of the primary mobile
+	languages, including Java, Objective-C, and .NET, and want to understand
+	the techniques for developing applications that will run across multiple
+	platforms},
+  file = {:artículos\\pro-smartphone-cross-platform-development.pdf:PDF},
+  isbn = {1430228687, 9781430228684}
+}
+
+@INPROCEEDINGS{Boukerche:2001:MSS:882459.882543,
+  author = {Boukerche, Azzedine and Hong, Sungbum and Jacob, Tom},
+  title = {MoSync: A Synchronization Scheme for Cellular Wireless and Mobile
+	Multimedia Systems},
+  booktitle = {Proceedings of the Ninth International Symposium in Modeling, Analysis
+	and Simulation of Computer and Telecommunication Systems},
+  year = {2001},
+  series = {MASCOTS '01},
+  pages = {89--},
+  address = {Washington, DC, USA},
+  publisher = {IEEE Computer Society},
+  acmid = {882543},
+  comment = {FRAMEWORK},
+  owner = {Carlos Peña},
+  url = {http://dl.acm.org/citation.cfm?id=882459.882543}
+}
+
+@MISC{Bäumer_frameworkdevelopment,
+  author = {Dirk Bäumer and Guido Gryczan and Rolf Knoll and Carola Lilienthal
+	and Dirk Riehle and Heinz Züllighoven},
+  title = {Framework Development for Large Systems},
+  abstract = {Frameworks are a key asset in large-scale object-oriented software
+	development. They promise increased productivity, shorter development
+	times, and higher quality of applications. To fulfill this, frameworks
+	should be designed in such a way that they can evolve, be easily
+	reused, adapted and configured. Drawing on experience with large-scale
+	industrial banking projects, we present concepts and techniques for
+	domain partitioning, framework layering, and framework construction.
+	In particular, we discuss how domain aspects relate to framework
+	structure, how frameworks are layered to accommodate domain needs,
+	and how the resulting framework layers are integrated without tight
+	coupling.},
+  file = {:artículos\\10.1.1.19.839.pdf:PDF}
+}
+
+@INCOLLECTION{Chang:2010:DMA:2172352.2172372,
+  author = {Chang, Guiran and Tan, Chunguang and Li, Guanhua and Zhu, Chuan},
+  title = {Mobile Multimedia Processing},
+  publisher = {Springer-Verlag},
+  year = {2010},
+  editor = {Jiang, Xiaoyi and Ma, Matthew Y. and Chen, Chang Wen},
+  chapter = {Developing mobile applications on the android platform},
+  pages = {264--286},
+  address = {Berlin, Heidelberg},
+  abstract = {Android is a new mobile platform. Developments of mobile applications
+	on Android have attracted a lot of attention and interest in research
+	and industry communities. Android is the first free, open source,
+	and fully customizable mobile platform. In this chapter, we walk
+	through steps in developing a mobile application on the Android platform.
+	Through an exemplary application of EPG (Electronic Program Guide)
+	recommender framework, we present key steps in developing an Android
+	application including how to create Android project and class, how
+	to build simple user interface, how to utilize networking protocols
+	and how to handle events. With the increased attention of Android
+	and growing number of Android based mobile phones available on the
+	market, we believe this chapter will timely help researchers rapidly
+	prototype mobile applications to prove concepts of their research
+	results.},
+  acmid = {2172372},
+  isbn = {3-642-12348-1, 978-3-642-12348-1},
+  keywords = {EPG recommender, android platform, java, mobile TV},
+  numpages = {23},
+  url = {http://dl.acm.org/citation.cfm?id=2172352.2172372}
+}
+
+@ARTICLE{Charland:2011:MAD:1966989.1968203,
+  author = {Charland, Andre and LeRoux, Brian},
+  title = {Mobile Application Development: Web vs. Native},
+  journal = {Queue},
+  year = {2011},
+  volume = {9},
+  pages = {20:20--20:28},
+  number = {4},
+  month = apr,
+  abstract = {A few short years ago, most mobile devices were, for want of a better
+	word, "dumb." Sure, there were some early smartphones, but they were
+	either entirely e-mail focused or lacked sophisticated touch screens
+	that could be used without a stylus. Even fewer shipped with a decent
+	mobile browser capable of displaying anything more than simple text,
+	links, and maybe an image. This meant if you had one of these devices,
+	you were either a businessperson addicted to e-mail or an alpha geek
+	hoping that this would be the year of the smartphone. Then Apple
+	changed everything with the release of the iPhone, and our expectations
+	for mobile experiences were completely reset.
+	
+	
+	The original plan for third-party iPhone apps was to use open Web
+	technology. Apple even released tooling for this in its Dashcode
+	project.4 Fast-forward three years and native apps are all the rage,
+	and—usually for performance reasons—the mobile Web is being unfavorably
+	compared.
+	
+	
+	There are two problems with this line of thinking. First, building
+	a different app for each platform is very expensive if written in
+	each native language. An indie game developer or startup may be able
+	to support just one device, likely the iPhone, but an IT department
+	will have to support the devices that its users have that may not
+	always be the latest and greatest. Second, the performance argument
+	that native apps are faster may apply to 3D games or image-processing
+	apps, but there is a negligible or unnoticeable performance penalty
+	in a well-built business application using Web technology.
+	
+	
+	For its part, Google is betting on Web technology to solve the platform
+	fragmentation problem. Vic Gundotra, VP of engineering at Google,
+	claimed that "even Google was not rich enough to support all of the
+	different mobile platforms from Apple's App Store to those of the
+	BlackBerry, Windows Mobile, Android, and the many variations of the
+	Nokia platform,"6 and this was before HP webOS, MeeGo, and other
+	platforms emerged.
+	
+	
+	In this article we discuss some of the strengths and weaknesses of
+	both Web and native approaches, with special attention to areas where
+	the gap is closing between Web technologies and their native counterparts.
+	
+	Native Code vs. Web Code
+	
+	
+	Implementing a software app begins with code. In the case of native
+	code, most often these days the developer typically writes in a C
+	dialect, as in the case of the iPhone. In our work at Nitobi and
+	on PhoneGap, we have had plenty of experience wrestling with the
+	various mobile platforms from a native development perspective.
+	
+	
+	Of course, for various market or organizational reasons most developers
+	or teams have to support apps on multiple smart platforms. Want to
+	write an app in native code and hit every single mobile operating
+	system? No problem if your team has the skill sets shown in table
+	1:},
+  acmid = {1968203},
+  address = {New York, NY, USA},
+  articleno = {20},
+  doi = {10.1145/1966989.1968203},
+  issn = {1542-7730},
+  issue_date = {April 2011},
+  numpages = {9},
+  publisher = {ACM},
+  url = {http://doi.acm.org/10.1145/1966989.1968203}
+}
+
+@INPROCEEDINGS{4809935,
+  author = {Choi, Y. and Yang, J.-S. and Jeong, J.},
+  title = {Application framework for multi platform mobile application software
+	development},
+  booktitle = {Advanced Communication Technology, 2009. ICACT 2009. 11th International
+	Conference on},
+  year = {2009},
+  volume = {01},
+  pages = {208 -213},
+  month = {feb.},
+  issn = {1738-9445},
+  keywords = {Application software;Computer architecture;Costs;Data models;Displays;Java;Laboratories;Programming;Software
+	design;Time to market;Java;mobile computing;software architecture;Java
+	source code generation;agile software development;model driven development;multi
+	platform mobile application software development;platform independent
+	model;software architecture;Framework;MDA;MDD;Mobile Application
+	Software;PIM;PSM;}
+}
+
+@INPROCEEDINGS{Dave:2011:OSA:1980022.1980415,
+  author = {Dave, U. A. and Samant, R. M.},
+  title = {Overview of smartphone application development using cross-platform
+	framework},
+  booktitle = {Proceedings of the International Conference \&\#38; Workshop on Emerging
+	Trends in Technology},
+  year = {2011},
+  series = {ICWET '11},
+  pages = {1379--1379},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1980415},
+  doi = {10.1145/1980022.1980415},
+  isbn = {978-1-4503-0449-8},
+  location = {Mumbai, Maharashtra, India},
+  numpages = {1},
+  owner = {Carlos Peña ACM},
+  timestamp = {2013.03.15},
+  url = {http://doi.acm.org/10.1145/1980022.1980415}
+}
+
+@INPROCEEDINGS{Fakoor:2012:ICF:2342509.2342520,
+  author = {Fakoor, Rasool and Raj, Mayank and Nazi, Azade and Di Francesco,
+	Mario and Das, Sajal K.},
+  title = {An integrated cloud-based framework for mobile phone sensing},
+  booktitle = {Proceedings of the first edition of the MCC workshop on Mobile cloud
+	computing},
+  year = {2012},
+  series = {MCC '12},
+  pages = {47--52},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {2342520},
+  doi = {10.1145/2342509.2342520},
+  file = {:An Integrated Cloud-based Framework.pdf:PDF},
+  isbn = {978-1-4503-1519-7},
+  keywords = {mobile application as a service (maaas), mobile cloud computing, mobile
+	phone sensing, people-centric applications, publish/subscribe},
+  location = {Helsinki, Finland},
+  numpages = {6},
+  owner = {VAIO},
+  timestamp = {2013.03.15},
+  url = {http://doi.acm.org/10.1145/2342509.2342520}
+}
+
+@BOOK{Fayad:1999:BAF:326112,
+  title = {Building application frameworks: object-oriented foundations of framework
+	design},
+  publisher = {John Wiley \& Sons, Inc.},
+  year = {1999},
+  author = {Fayad, Mohamed E. and Schmidt, Douglas C. and Johnson, Ralph E.},
+  address = {New York, NY, USA},
+  isbn = {0-471-24875-4}
+}
+
+@INPROCEEDINGS{Fung:2012:IWH:2399776.2399812,
+  author = {Fung, Jane and Moghal, Salman and Sheikh, Ozair and Ivanov, Vess
+	and Marini, John},
+  title = {IBM Worklight hands-on workshop},
+  booktitle = {Proceedings of the 2012 Conference of the Center for Advanced Studies
+	on Collaborative Research},
+  year = {2012},
+  series = {CASCON '12},
+  pages = {257--258},
+  address = {Riverton, NJ, USA},
+  publisher = {IBM Corp.},
+  acmid = {2399812},
+  comment = {FRAMEWORKS},
+  location = {Toronto, Ontario, Canada},
+  numpages = {2},
+  owner = {Carlos Peña},
+  url = {http://dl.acm.org/citation.cfm?id=2399776.2399812}
+}
+
+@ARTICLE{journals/software/GavalasE11,
+  author = {Gavalas, Damianos and Economou, Daphne},
+  title = {Development Platforms for Mobile Applications: Status and Trends.},
+  journal = {IEEE Software},
+  year = {2011},
+  volume = {28},
+  pages = {77-86},
+  number = {1},
+  added-at = {2011-11-07T00:00:00.000+0100},
+  biburl = {http://www.bibsonomy.org/bibtex/2aeb4e4accf900b0a3c9f17a3de8be1c9/dblp},
+  ee = {http://doi.ieeecomputersociety.org/10.1109/MS.2010.155},
+  interhash = {cff92c873b1d5981c50ea1a76aa1ac36},
+  intrahash = {aeb4e4accf900b0a3c9f17a3de8be1c9},
+  keywords = {dblp},
+  timestamp = {2011-11-07T00:00:00.000+0100},
+  url = {http://www.infoq.com/articles/ieee-mobile-platforms}
+}
+
+@INPROCEEDINGS{5967334,
+  author = {Grgurina, R. and Brestovac, G. and Grbac, T.G.},
+  title = {Development environment for Android application development: An experience
+	report},
+  booktitle = {MIPRO, 2011 Proceedings of the 34th International Convention},
+  year = {2011},
+  pages = {1693 -1698},
+  month = {may},
+  keywords = {mobile communication;mobile computing;public domain software;software
+	engineering;Android application development;end user acceptance;mobile
+	communication;open source development environment;open source software;}
+}
+
+@INPROCEEDINGS{Mahmoud:2012:IMS:2380552.2380602,
+  author = {Mahmoud, Qusay H. and Zanin, Shaun and Ngo, Thanh},
+  title = {Integrating mobile storage into database systems courses},
+  booktitle = {Proceedings of the 13th annual conference on Information technology
+	education},
+  year = {2012},
+  series = {SIGITE '12},
+  pages = {165--170},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {2380602},
+  doi = {10.1145/2380552.2380602},
+  isbn = {978-1-4503-1464-0},
+  keywords = {database courses, mobile application development, mobile devices},
+  location = {Calgary, Alberta, Canada},
+  numpages = {6},
+  owner = {VAIO},
+  timestamp = {2013.03.15},
+  url = {http://doi.acm.org/10.1145/2380552.2380602}
+}
+
+@INPROCEEDINGS{Murray:2004:ASS:979922.979945,
+  author = {Murray, Leesa and Carrington, David and Strooper, Paul},
+  title = {An approach to specifying software frameworks},
+  booktitle = {Proceedings of the 27th Australasian conference on Computer science
+	- Volume 26},
+  year = {2004},
+  series = {ACSC '04},
+  pages = {185--192},
+  address = {Darlinghurst, Australia, Australia},
+  publisher = {Australian Computer Society, Inc.},
+  abstract = {A framework is a reusable design that requires software components
+	to function. To instantiate a framework, a software engineer must
+	provide the software components required by the framework. To do
+	this effectively, the framework-component interfaces must be specified
+	so the software engineer knows what assumptions the framework makes
+	about the components, and so the components can be verified against
+	these assumptions. This paper presents an approach to specifying
+	software frameworks. The approach involves the specification of the
+	framework's syntax, semantics, and the interfaces between the framework
+	and its components. The approach is demonstrated with a simple case
+	study.},
+  acmid = {979945},
+  keywords = {software frameworks, specification},
+  location = {Dunedin, New Zealand},
+  numpages = {8},
+  url = {http://dl.acm.org/citation.cfm?id=979922.979945}
+}
+
+@INPROCEEDINGS{4632123,
+  author = {Rahimian, V. and Ramsin, R.},
+  title = {Designing an agile methodology for mobile software development: A
+	hybrid method engineering approach},
+  booktitle = {Research Challenges in Information Science, 2008. RCIS 2008. Second
+	International Conference on},
+  year = {2008},
+  pages = {337 -342},
+  month = {june},
+  abstract = {New Advances in mobile computer technology and the rapid growth of
+	wireless networks in quality and quantity has introduced new applications
+	and concerns in computer science and industry. The unique requirements
+	and constraints associated with mobile systems have brought new challenges
+	to software development for such environments, as it demands extensive
+	improvements to traditional systems development methodologies in
+	order to fulfill the special needs of this field. We examine the
+	challenges of developing software for mobile systems, starting by
+	reviewing mobile systemspsila characteristics and investigating the
+	status quo of mobile software development methods. It has been shown
+	that Agile methodologies are appropriate methods for the development
+	of such systems; based on this assumption, we identify specific requirements
+	for a mobile software development methodology, based on which a new
+	agile method is engineered using the Hybrid Methodology Design approach.
+	We claim that this methodology, and the approach used for its construction,
+	can facilitate the application of a software engineering approach
+	to the production of mobile software systems.},
+  doi = {10.1109/RCIS.2008.4632123},
+  keywords = {Application software;Computer industry;Computer networks;Computer
+	science;Design engineering;Design methodology;Mobile computing;Programming;Software
+	systems;Wireless networks;mobile computing;software engineering;agile
+	methodology;hybrid methodology design;mobile computer technology;mobile
+	software development:;software engineering approach;wireless networks;Agile
+	Methods;Method Engineering;Mobile Software Development;}
+}
+
+@PHDTHESIS{citeulike:4633645,
+  author = {Riehle, Dirk},
+  title = {{Framework Design: A Role Modeling Approach}},
+  school = {ETH Z\"{u}rich},
+  year = {2000},
+  address = {Z\"{u}rich, Switzerland},
+  abstract = {Role modeling for framework design, as developed in this dissertation,
+	makes designing, learning, and using object-oriented frameworks easier
+	than possible with traditional class-based approaches.
+	
+	
+	Object-oriented frameworks promise higher productivity and shorter
+	time-to-market for the development of object-oriented applications.
+	These goals are achieved through design and code reuse. While many
+	projects show that these promises can be met, failed projects also
+	show that they are not always easy to reach. This dissertation addresses
+	three pertinent technical problems of designing, learning, and using
+	object-oriented frameworks: complexity of classes, complexity of
+	object collaboration, and lack of clarity of requirements put upon
+	use-clients of a framework.
+	
+	
+	Role modeling for framework design is an evolutionary extension of
+	class-based modeling of frameworks. The method enhances class-based
+	modeling with role modeling concepts. In this method, objects play
+	roles that are described by role types. An object typically plays
+	several roles, so that the class of an object composes several role
+	types. Moreover, objects collaborate for several different purposes,
+	each of which is called an object collaboration task. Such a task
+	is described by a role model. A class model composes all relevant
+	role models to describe how instances of its classes collaborate.
+	Describing classes as compositions of role types and class models
+	as compositions of role models reduces class and object collaboration
+	complexity.
+	
+	
+	Going one step further, role modeling for framework design defines
+	frameworks as explicit design and implementation artifacts with well-defined
+	boundaries. A framework defines how to use it with the help of so-called
+	free role types of free role models. A free role model provides free
+	role types for roles that clients of a framework have to play to
+	make proper use of the framework. Free role types are key to defining
+	the requirements put upon use-clients of a framework. Only by acting
+	according to free role types from a free role model may use-clients
+	make use of framework objects. The dissertation shows how these concepts
+	are used to design, use, and layer object-oriented frameworks.
+	
+	
+	Role modeling for framework design represents a significant improvement
+	over current practice regarding the initially stated problems of
+	framework design. This thesis is validated with the help of three
+	case studies that show how role modeling for framework design works
+	in practice. Each of the case studies compares a traditional class-based
+	framework design with a framework design based on role modeling.
+	However, each case study does so from a different angle. The first
+	case study on the Geo Object framework compares a traditional design
+	with an enhanced role modeling design. The second case study on the
+	KMU Desktop Tools framework shows how role modeling helps in the
+	redesign of an existing framework and how the redesigned version
+	compares to the old version. The third case study on the JHotDraw
+	framework for drawing editors shows how an existing well-designed
+	framework design can be described even better using role modeling.
+	Finally, all three case studies reflect on the experiences made while
+	carrying them out.
+	
+	
+	For its validation, the thesis is split up into nine sub-theses, each
+	of which has a problem and an activity dimension. The addressed problems
+	are class complexity, object collaboration complexity, and lack of
+	clarity of requirements put upon use-clients. The activities are
+	designing and redesigning a framework, learning a framework, and
+	using a framework. For each problem/activity pair an argument is
+	made based on the case studies. The overall validation of the thesis
+	becomes the validation of all nine problem/activity pairs.
+	
+	
+	Role modeling for framework design combines the strengths of role
+	modeling with those of class-based modeling while leaving out their
+	weaknesses. It is therefore an evolutionary extension of current
+	methods that preserves existing investments. Finally, role modeling
+	for framework design is the first comprehensive method to make frameworks
+	explicit design artifacts and to introduce modeling concepts for
+	directly expressing their unique properties.},
+  citeulike-article-id = {4633645},
+  keywords = {architecture, master\_thesis, software},
+  owner = {Camilo},
+  posted-at = {2009-05-25 20:46:11},
+  priority = {2},
+  timestamp = {2013.02.14},
+  url = {http://dirkriehle.com/computer-science/research/dissertation/appendix-a.html}
+}
+
+@ARTICLE{Rondeau:2005:MAB:1070838.1070867,
+  author = {Rondeau, David B.},
+  title = {For mobile applications, branding is experience},
+  journal = {Commun. ACM},
+  year = {2005},
+  volume = {48},
+  pages = {61--66},
+  number = {7},
+  month = jul,
+  acmid = {1070867},
+  address = {New York, NY, USA},
+  doi = {10.1145/1070838.1070867},
+  issn = {0001-0782},
+  issue_date = {July 2005},
+  numpages = {6},
+  owner = {Carlos Peña ACM},
+  publisher = {ACM},
+  timestamp = {2013.03.15},
+  url = {http://doi.acm.org/10.1145/1070838.1070867}
+}
+
+@INPROCEEDINGS{Rukzio:2006:VUC:1152215.1152267,
+  author = {Rukzio, Enrico and Hamard, John and Noda, Chie and De Luca, Alexander},
+  title = {Visualization of uncertainty in context aware mobile applications},
+  booktitle = {Proceedings of the 8th conference on Human-computer interaction with
+	mobile devices and services},
+  year = {2006},
+  series = {MobileHCI '06},
+  pages = {247--250},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1152267},
+  doi = {10.1145/1152215.1152267},
+  file = {:Hermes Generic Designs for Mobile, Context-Aware Trails-Based Applications.pdf:PDF},
+  isbn = {1-59593-390-5},
+  keywords = {context aware, evaluation, mobile application, user study, visualization
+	of uncertainty},
+  location = {Helsinki, Finland},
+  numpages = {4},
+  owner = {VAIO},
+  timestamp = {2013.03.15},
+  url = {http://doi.acm.org/10.1145/1152215.1152267}
+}
+
+@ARTICLE{6248786,
+  author = {Tracy, K.W.},
+  title = {Mobile Application Development Experiences on Apples iOS and Android
+	OS},
+  journal = {Potentials, IEEE},
+  year = {2012},
+  volume = {31},
+  pages = {30 -34},
+  number = {4},
+  month = {aug. },
+  doi = {10.1109/MPOT.2011.2182571},
+  issn = {0278-6648},
+  keywords = {Competitive intelligence;Computer applications;Google;Mobile communication;Performance
+	evaluation;Smart phones;computational complexity;mobile computing;mobile
+	handsets;operating systems (computers);software engineering;Android
+	OS;Apple iOS;Google Android operating system;IEEE mobile application;IEEE.tv
+	content;complexities;iPhone;mobile application deployment;mobile
+	application development experiences;}
+}
+
+@ARTICLE{Wohltorf:2005:BAC:2288607.2292775,
+  author = {Wohltorf, J. and Cissee, R. and Rieger, A.},
+  title = {BerlinTainment: an agent-based context-aware entertainment planning
+	system},
+  journal = {Comm. Mag.},
+  year = {2005},
+  volume = {43},
+  pages = {102--109},
+  number = {6},
+  month = jun,
+  acmid = {2292775},
+  address = {Piscataway, NJ, USA},
+  doi = {10.1109/MCOM.2005.1452837},
+  file = {:BerlinTainment An Agent-Based Serviceware Framework.pdf:PDF},
+  issn = {0163-6804},
+  issue_date = {June 2005},
+  numpages = {8},
+  owner = {VAIO},
+  publisher = {IEEE Press},
+  timestamp = {2013.03.15},
+  url = {http://dx.doi.org/10.1109/MCOM.2005.1452837}
+}
+
+@ELECTRONIC{AMPChromaArc,
+  title = {AMP Chroma architecture, http://www.antennasoftware.com/products/overview},
+  url = {http://www.antennasoftware.com/products/overview},
+  owner = {VAIO},
+  timestamp = {2013.04.28}
+}
+
+@PERIODICAL{CE:J912,
+  title = {Computers in Entertainment (CIE)},
+  abbr = {Comput. Entertain.},
+  address = {New York, NY, USA},
+  key = {{$\!\!$}},
+  owner = {Carlos Peña ACM},
+  publisher = {ACM},
+  timestamp = {2013.03.15}
+}
+
+@ELECTRONIC{CODENAMEONEARCH,
+  title = {CODENAME ONE architecture, http://www.codenameone.com/},
+  url = {http://www.codenameone.com/},
+  owner = {VAIO},
+  timestamp = {2013.04.28}
+}
+
+@ELECTRONIC{IBMWorklight,
+  title = {IBM Worklight Architecture, http://www-01.ibm.com/software/mobile-solutions/worklight/features/phonegap/},
+  url = {http://www-01.ibm.com/software/mobile-solutions/worklight/features/phonegap/},
+  keywords = {Worklight Architecture},
+  owner = {VAIO},
+  timestamp = {2013.03.26}
+}
+
+@ELECTRONIC{MoSyncArchitecture,
+  title = {MoSync Architecture, http://www.mosync.com/documentation/manualpages/runtime-architecture},
+  url = {http://www.mosync.com/documentation/manualpages/runtime-architecture},
+  keywords = {MoSync Architecture},
+  owner = {VAIO},
+  timestamp = {2013.03.28}
+}
+
+@PROCEEDINGS{Johnson:2005:1094855,
+  title = {OOPSLA '05: Companion to the 20th annual ACM SIGPLAN conference on
+	Object-oriented programming, systems, languages, and applications},
+  year = {2005},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  file = {:OOPSLA-FINAL.pdf:PDF},
+  isbn = {1-59593-193-7},
+  location = {San Diego, CA, USA},
+  owner = {VAIO},
+  timestamp = {2013.03.15}
+}
+
+@comment{jabref-meta: selector_review:}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
