@@ -1,0 +1,391 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\lang spanish
+Framework multiplataforma para móviles
+\end_layout
+
+\begin_layout Author
+
+\lang spanish
+Ing.
+ MSc.
+ Camilo Rodríguez Ing.
+ Héctor Enríquez
+\end_layout
+
+\begin_layout Abstract
+
+\lang spanish
+El presente documento
+\end_layout
+
+\begin_layout Keywords
+
+\lang spanish
+Framework, dispositivos móviles, aplicaciones nativas, aplicaciones web,
+ aplicaciones híbridas
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Introducción
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Actualmente uno de los principales problemas que enfrentan los desarrolladores
+ de aplicaciones para dispositivos móviles es la necesidad de desarrollar
+ una versión diferente de la aplicación para cada una de las plataformas
+ móviles existentes: Android, Iphone, Hewlette Packard, Windows Phone.
+ En los últimos años han comenzado a aparecer frameworks que permiten desarrolla
+r la aplicación una vez y generarla automáticamente para cada una de las
+ plataformas.
+ Han aparecido varias alternativas y aún se encuentran en étapa de desarrollo
+ muchas de estas, siendo este un campo aún muy reciente.En muchas ocasiones
+ los desarrolladores no se saben cual usar o incluso si se debe usar o no
+ una de estas herramientas.
+ Por esta razón este documento se propone hacer una breve revisión y explicación
+ de estas nuevas tecnologías describiendo caracteristicas, arquitecturas
+ , ventajas y desventajas.
+ Este documento se encuentra organizado de la siguiente forma: En la sección
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Frameworks-de-desarrollo"
+
+\end_inset
+
+ se describe la función de los frameworks de dearrollo de aplicacion multiplataf
+orma para dispositivos móviles; La sección 
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Frameworks de desarrollo de aplicaciones multiplataforma para dispositivos
+ móviles
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Frameworks-de-desarrollo"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Un framework provee una serie de estructuras de dominio y funcionalidad
+ específica basada en patrones.
+ Los patrones codifican un diseño reutilizable de soluciones ya conocidas
+ a problemas de software de determinados contextos y dominios.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "citeulike:4633645"
+
+\end_inset
+
+.
+ Los Frameworks permiten alta productividad, menor tiempo de desarrollo
+ y mayor calidad en las aplicaciones
+\begin_inset CommandInset citation
+LatexCommand cite
+key "citeulike:4633645"
+
+\end_inset
+
+.
+ Un dominio particular es la creación de código reutilizable en cualquier
+ plataforma de hardware/software.
+ La creciente diversidad de arquitecturas de harware y de software , sistemas
+ operativos, y plataformas de comunicaciones hacen difícil la implementación
+ de manera directa
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fayad:1999:BAF:326112"
+
+\end_inset
+
+.
+ En este dominio de aplicación se ubican las aplicaciones para dispositivos
+ móviles, debido a que cada dispositivo tiene un arquitectura de hardware
+ y software específica, y un lenguaje de programación diferente (a manera
+ de ilustración se presentan algunas de los sistemas operativos más comunes
+ para dispositivos móviles y su respectivo lenguaje de desarrollo en la
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Lenguajes-de-Programación"
+
+\end_inset
+
+).
+ En el caso de los framework multiplataforma para dispositivos móviles,
+ lo que se busca es la reutilización de código en tiempo de compilación.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename charland_table.png
+	scale 70
+	BoundingBox 0bp 0bp 420bp 210bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Lenguajes-de-Programación"
+
+\end_inset
+
+Lenguajes de Programación para algunos Sistemas Operativos para Móviles
+ , tomado de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Charland:2011:MAD:1966989.1968203"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Existen 3 maneras de desarrollar una aplicación para dispositivos móviles:
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Desarrollar una aplicación web que se ejecute en el navegador del dispositivo
+ móvil.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Desarrollar una aplicación en código nativo para cada plataforma para lo
+ cual se debe utilizar un lenguaje y una herramienta de desarrollo particular
+ para cada caso tal como se presenta en la tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Lenguajes-de-Programación"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Desarrollar una aplicación híbrida, la cual es una combinación de aplicación
+ web y aplicación nativa.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+La primera aproximación tiene la ventaja que la aplicación se ejecuta en
+ el navegador de cada dispositivo haciéndola independiente de plataforma.
+ El desarrollador crea una única versión utilizando html y javascript como
+ cualquier otra aplicación web que se ejecuta en el lado del cliente.
+ Sin embargo, tiene como desventajas que nos todos los controles Html funcionan
+ de la misma manera en todos los disposivitos para móviles ni tampoco las
+ dimensiones de los componentes de la aplicación se ajustan de manera correcta
+ a las pantallas de los dispositivos.
+ Además, la aplicación no puede hacer uso de recursos de software y hardware
+ del dispositivo móvil como cámara, programas, archivos y componentes del
+ sistema.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+La segunda aproximación tiene la ventaja de que al desarrollar específicamente
+ para una plataforma se pueden utilizar todos los recursos del sistema operativo
+ y del dispositivo, además de usar todos los controles específicos para
+ dicho dispositivo.
+ La desventaja es que el desarrollador debe crear una versión de la aplicación
+ para cada plataforma.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Las aplicaciones híbridas utilizan ambas ideas.
+ Si bien se desarrolla una versión en codigo nativo para cada plataforma,
+ el desarrollo se realiza utilizando código Html y lenguaje Javascript como
+ si fuera una aplicación Web.
+ Sin embargo, el framework es el que se encarga de transformar la aplicación
+ en código específico para cada plataforma.
+ La figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparación-entre-las"
+
+\end_inset
+
+ presenta una breve comparación entre los tipos de desarrollo.
+ La revisión de este tipo de framework, el cual permite la generación de
+ código nativo específico apartir componentes de de software reutilizable
+ en un lenguaje independiente de plataforma, es el objetivo de este trabajo.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename comparacion.png
+	lyxscale 50
+	scale 35
+	BoundingBox 0bp 0bp 1024bp 500bp
+	clip
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparación-entre-las"
+
+\end_inset
+
+Comparación entre las diferentes estrategias de desarrollo para dispositivos
+ móviles 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bakker2011"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

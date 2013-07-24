@@ -105,12 +105,21 @@ r la aplicación una vez y generarla automáticamente para cada una de las
  plataformas.
  Han aparecido varias alternativas y aún se encuentran en étapa de desarrollo
  muchas de estas, siendo este un campo aún muy reciente.En muchas ocasiones
- se no se sabe cual usar o incluso si se debe usar o no una de estas herramienta
-s.
+ los desarrolladores no se saben cual usar o incluso si se debe usar o no
+ una de estas herramientas.
  Por esta razón este documento se propone hacer una breve revisión y explicación
  de estas nuevas tecnologías describiendo caracteristicas, arquitecturas
  , ventajas y desventajas.
- Este documento se encuentra organizado de la siguiente forma
+ Este documento se encuentra organizado de la siguiente forma: En la sección
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Frameworks-de-desarrollo"
+
+\end_inset
+
+ se describe la función de los frameworks de dearrollo de aplicacion multiplataf
+orma para dispositivos móviles; La sección 
 \end_layout
 
 \begin_layout Section
@@ -2839,6 +2848,13 @@ DOFA para AMP Chroma
 
 \begin_layout Section
 Conclusiones y trabajo futuro
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conclusiones-y-trabajo"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

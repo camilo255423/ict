@@ -119,7 +119,7 @@ reference "sec:Frameworks-de-desarrollo"
 \end_inset
 
  se describe la función de los frameworks de dearrollo de aplicacion multiplataf
-orma para dispositivos móviles; La sección 
+orma para dispositivos móviles; La sección
 \end_layout
 
 \begin_layout Section
@@ -391,13 +391,6 @@ key "Bakker2011"
 
 \lang spanish
 Características de los Frameworks existentes
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Características-de-los"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2855,13 +2848,6 @@ DOFA para AMP Chroma
 
 \begin_layout Section
 Conclusiones y trabajo futuro
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Conclusiones-y-trabajo"
-
-\end_inset
-
-
 \end_layout
 
 \end_body
