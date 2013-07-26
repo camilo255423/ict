@@ -339,7 +339,7 @@ reference "fig:Comparación-entre-las"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -385,6 +385,195 @@ key "Bakker2011"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+
+\lang spanish
+Características de los Frameworks existentes
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Se eligieron los frameworks a estudiar basado en dos aspectos: Primero,
+ que el framework permita generar aplicaciones para varias plataformas,
+ y segundo que la aplicación sea híbrida, de tal manera que se pueda generar
+ una aplicación móvil como tal y no una aplicación web.
+ Los frameworks seleccionados generan aplicaciones para al menos 4 plataformas
+ diferentes.
+ Estos frameworks son: PhoneGap, Rhodes, AplicationCraft
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Se explican brevemente las características, la arquitectura, los sitemas
+ operativos y dispositivos soportador y las herramientas de desarrollo.
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+PhoneGap
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:PhoneGap:"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+PhoneGap se desarrolló originalmente por la empresa Nitobi en 2011 y fue
+ adquirido posteriormente por Adobe, liberando el código bajo el proyecto
+ Apache Cordova.
+ En otras palabras , el producto que pertenece a Adobe se denomina actualmente
+ PhoneGap y el proyecto de código abierto se denomina Cordova.
+ Varios de los framework descritos en este documento utilizan Cordova.
+ El objetivo de este framework es permitir desarrollar aplicaciones embebidas
+ en código nativo utilizando exclusivamente código html5 y Javascript.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ghatol:2012:BPM:2331456"
+
+\end_inset
+
+.
+ Phone Gap Build ofrece varios tipos de plan pagos.
+ Debido a qué el código se compila a través de gitHub , el derecho a que
+ el código sea privado depende del precio del plan.
+ La versión gratuita permite una sola aplicación privada y la paga va desde
+ 120 a 900 por año, dependiendo del número de aplicaciones.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang spanish
+Arquitectura
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename ../cordova_fig1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+Arquitectura Cordova
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arquitectura-Cordova"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename arq_phone.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+Arquitectura PhoneGap
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arquitectura-PhoneGap"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bakker2011"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Cordova está compuesto por un API en javascript y un API en código nativo
+ para cada uno de los sistemas operativos que soporta (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arquitectura-Cordova"
+
+\end_inset
+
+).
+ La aplicación se ejecuta en un componente denominado webview, el cual contiene
+ el la aplicación desarrollada en html5 y javascript la cual se comunica
+ que con el API javascript de Cordova.
+ Este a su vez se comunica con el API de código nativo.
+ Esto implica que cada aplicación se debe recompilar para cada sistema operativo
+ con su respectivo API.
 \end_layout
 
 \end_body

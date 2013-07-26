@@ -166,7 +166,7 @@ today}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/saasbook/Documents/investigacion USB/logo.jpeg
+	filename logo.jpeg
 	scale 40
 	BoundingBox 0bp 70bp 212bp 270bp
 	clip
@@ -342,7 +342,7 @@ vfill
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/saasbook/Documents/investigacion USB/logo.jpeg
+	filename logo.jpeg
 	scale 40
 	BoundingBox 0bp 70bp 212bp 270bp
 	clip
@@ -879,7 +879,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename phonegap_caracterбsticas.PNG
+	filename phonegap_caracteristicas.PNG
 	lyxscale 40
 	scale 40
 

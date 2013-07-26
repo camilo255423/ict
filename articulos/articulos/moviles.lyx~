@@ -5,6 +5,7 @@
 \textclass article
 \use_default_options true
 \begin_modules
+theorems-ams
 eqs-within-sections
 figs-within-sections
 \end_modules
@@ -165,14 +166,14 @@ today}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename Imagenes/logo.png
+	filename logo.jpg
 	scale 40
-	BoundingBox 0bp 30bp 212bp 270bp
+	BoundingBox 0bp 70bp 212bp 270bp
 	clip
 
 \end_inset
 
-
+:
 \end_layout
 
 \begin_layout Standard
@@ -341,9 +342,9 @@ vfill
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename Imagenes/logo.png
+	filename logo.jpg
 	scale 40
-	BoundingBox 0bp 30bp 212bp 270bp
+	BoundingBox 0bp 70bp 212bp 270bp
 	clip
 
 \end_inset
@@ -477,6 +478,13 @@ key "citeulike:4633645"
 \begin_inset CommandInset citation
 LatexCommand cite
 key "citeulike:4633645"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bäumer_frameworkdevelopment"
 
 \end_inset
 
@@ -871,7 +879,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename phonegap_caracterбsticas.PNG
+	filename phonegap_caracteristicas.PNG
 	lyxscale 40
 	scale 40
 
@@ -1064,26 +1072,15 @@ begin{center}
 
 
 \backslash
-begin{tabular}{ |p{2.5cm} | l |l |l |l |l | }     
+begin{tabular}{ |l | l |l |l |l |l | }     
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-hline     
-\backslash
-textbf{Dispositivo - SO} & 
-\backslash
-textbf{iPhone} & 
-\backslash
-textbf{Android} & 
-\backslash
-textbf{RIM} & 
-\backslash
-textbf{Windows Mobile} & 
-\backslash
-textbf{Windows Phone 7}
+hline     Dispositivo - SO & iPhone & Android & RIM & Windows Mobile & Windows
+ Phone 7 
 \backslash
 
 \backslash
@@ -1230,10 +1227,10 @@ name "sub:Características-Adicionales"
 \end_layout
 
 \begin_layout Standard
-Rhode Sync es un servidor que le permite a la aplicación móvil acceder a
+Rhode Sync es un servidor que le permite a la aplicación móbil acceder a
  cualquier servicio de la red, de tal forma que los datos se puedan accder
  de manera transparente como si estuvieran localmente.
- El servidor RhoSync actúa como capa intermedia entre la aplicación móvil
+ El servidor RhoSync actúa como capa intermedia entre la aplicación móbil
  y el servicio web el cual accede a los datos remotos.
  El servidor RhoSync almacena informacióndesde el back-mend del sistema
  como tripletas (OAV) objeto -atributo-valor capaz de representar cualquier
@@ -1597,7 +1594,7 @@ status open
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <row>
-<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1926,7 +1923,7 @@ Windows, iOS X
 \begin_layout Plain Layout
 
 \lang english
-Comparación de versiones de MoSync
+Comparación de vesriones de MoSync
 \end_layout
 
 \end_inset
@@ -2269,8 +2266,8 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
-<column alignment="left" valignment="top" width="9cm">
 <row>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2296,7 +2293,7 @@ PHONEGAP
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2320,7 +2317,7 @@ El servicio de notificaciones está limitado a Andriod y a iOS
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2345,13 +2342,13 @@ Aprovecha de manera extensa los servicios y utilidades de los dispositivos
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \lang english
-AMENAZAS
+FORTALEZAS
 \end_layout
 
 \end_inset
@@ -2362,8 +2359,8 @@ AMENAZAS
 \begin_layout Plain Layout
 
 \lang english
-Precio variable de acuerdo al número de aplicaciones, evento que puede disminuir
- el interés por el producto 
+Dueño de la arquitectura cordova, elemento en el que se basan otros frameworks,
+ lo que lo hace pionero en arquitectura 
 \end_layout
 
 \end_inset
@@ -2376,7 +2373,7 @@ Precio variable de acuerdo al número de aplicaciones, evento que puede disminui
 \begin_layout Plain Layout
 
 \lang english
-FORTALEZAS
+AMENAZAS
 \end_layout
 
 \end_inset
@@ -2387,8 +2384,8 @@ FORTALEZAS
 \begin_layout Plain Layout
 
 \lang english
-Dueño de la arquitectura cordova, elemento en el que se basan otros frameworks,
- lo que lo hace pionero en arquitectura
+Precio variable de acuerdo al número de aplicaciones, evento que puede disminuir
+ el interés por el producto 
 \end_layout
 
 \end_inset
@@ -2445,7 +2442,7 @@ status open
 <lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
-<column alignment="left" valignment="top" width="9cm">
+<column alignment="left" valignment="top" width="0">
 <row>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2622,7 +2619,7 @@ status open
 <lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
-<column alignment="left" valignment="top" width="9cm">
+<column alignment="left" valignment="top" width="0">
 <row>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2796,7 +2793,7 @@ status open
 <lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
-<column alignment="left" valignment="top" width="9cm">
+<column alignment="left" valignment="top" width="0">
 <row>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2972,7 +2969,7 @@ status open
 <lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
-<column alignment="left" valignment="top" width="9cm">
+<column alignment="left" valignment="top" width="0">
 <row>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -3146,7 +3143,7 @@ status open
 <lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
-<column alignment="left" valignment="top" width="9cm">
+<column alignment="left" valignment="top" width="0">
 <row>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -3320,7 +3317,7 @@ status open
 <lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
-<column alignment="left" valignment="top" width="9cm">
+<column alignment="left" valignment="top" width="0">
 <row>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -3481,12 +3478,11 @@ Métricas de comparación
 \begin_layout Standard
 La evaluación del desempeño de una aplicación es necesaria cuando se requiere
  comparar un grupo de alternativas de diseño y desarrollo, en el caso de
- este informe los diferentes frameworks existentes para el desarrollo de
- aplicativos para dispositivos móviles.
- Infortunadamente, las diversas clases de aplicación que existen hoy en
- día para diferentes Sistemas de Información son tan numerosos que ofrecen
- la posibilidad de tener un estándar para la evaluación del desempeño de
- una aplicación para todos los casos.
+ este trabjo los diferentes frameworks existentes.
+ Infortunadamente, Los diversas clases de aplicación que existen hoy en
+ día para los distintos sistemas de información son tan númerosos que nos
+ hacen posible tener un estándar para la evaluación del desempeño de una
+ aplicación para todos los casos.
  El primer paso para la evaluación del desempeño es determinar el conjunto
  de métricas y técnicas a utilizar.
 \begin_inset CommandInset citation
@@ -3499,8 +3495,8 @@ key "citeulike:5190414"
 \end_layout
 
 \begin_layout Standard
-El desempeño de los frameworks se puede analizar desde dos perspectivas:
- la del desarrollador y la del usuario.
+El desempeño de los framework se puede analizar desde dos perspectivas:
+ La del desarrollador y la del usuario.
  Desde el punto de vista del desarrollador se deben tener en cuenta la curva
  de aprendizaje, la documentación existente, las herramientas de desarrollo
  y los tiempos de desarrollo.
@@ -3513,8 +3509,8 @@ n desarrollada con el framework, teniendo en cuenta métricas como carga
 El análisis del desempeño de una aplicación es complejo debido al número
  de componentes e interacciones que la conforman.
  Una aplicación puede estar compuesta por bases de datos, servidores Web,
- balanceadores de carga y aplicaciones personalizadas, todos ejecutándose
- en un Sistema Operativo
+ balanceadores de carga y aplicaciones personzalizas , todos ejecutándose
+ en un sistema operativo
 \begin_inset CommandInset citation
 LatexCommand cite
 key "perfomBrandan"
@@ -3522,16 +3518,16 @@ key "perfomBrandan"
 \end_inset
 
 .
- En el caso de esta investigación, existen consideraciones particulares
- a tener en cuenta a la hora de evaluar el desempeño de una aplicación móvil.
+ En el caso de este trabajo existen consideraciones particulares a tener
+ en cuenta a la hora de evaluar el desempeño de una aplicación móvil.
  Por ejemplo, el tamaño de la pantalla, ya que en los dispositivos móviles
  hay menos espacio en la pantalla para datos e imágenes; el número de conexiones
  por dominio que realiza el navegador ya que estos no soportan la misma
  cantidad que una aplicación para PC; la comunicación por red se ve afectada
- en los móviles por la baja calidad de la señal en ciertos momentos y, finalment
-e la capacidad de procesamiento y almacenamiento es mucho menor, por tanto
- es muy importante analizar la carga sobre la CPU y la memoria que producen
- los script de la aplicación
+ en los móviles por las baja calidad de la señal en ciertos momentos; y
+ finalmente la capacidad de procesamiento y almacenamiento es mucho menor
+ , por tanto es muy importante analizar la carga sobre la CPU y la memoria
+ que producen los script de la aplicación
 \begin_inset CommandInset citation
 LatexCommand cite
 key "acmque"
@@ -3542,15 +3538,15 @@ key "acmque"
 \end_layout
 
 \begin_layout Standard
-Para esta investigación se proponen las siguientes métricas para evaluar
- el desempeño de una aplicación desarrollada con determinado framework:
+Para este trabajo se proponen la siguientes métricas para evaluar el desempeño
+ de una aplicación desarrollada con determinado framework:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -3656,19 +3652,138 @@ Métricas propuestas para evaluar el desempeño de la aplicación
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
+Desempeño de la aplicación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{ |l | l | }     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     Recurso &  Métrica 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     Curva de Aprendizaje & Porcentaje de Uso  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     Documentación & Número de Bytes  
+\backslash
+
+\backslash
+     
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     Interfaz de red &   Promedio de Bytes Enviados y Recibidos
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline     Almacenamiento persistente &   Número de Bytes
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Métricas propuestas para evaluar el desempeño de la aplicación
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-Para evaluar el framework desde la perspectiva del desarrollador se implementará
-n varios estudios de caso en los diferentes frameworks para evaluar aspectos
- que no son fácilmente cuantificables, como por ejemplo: curva de aprendizaje,
+Para evaluar el framwork desde la perspectiva del desarrollador se implementarán
+ varios estudios de caso en los diferentes frameworks para evaluar aspectos
+ que no son facilmente cuantificables, como por ejemplo: curva de aprendizaje,
  proceso de desarrollo y documentación existente.
  Adicionalmente se utilizará la clásica métrica de software SLOC
 \begin_inset CommandInset citation
@@ -3680,14 +3795,14 @@ key "Albrecht:1983:SFS:1313346.1313875"
 .
  Si bien esta técnica presenta varias desventajas para determinar el costo
  de desarrollo de una aplicación en un proyecto de software, es un parámetro
- sencillo que permite establecer la comparación para esta investigación.
+ sencillo comparación para este trabajo.
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "biblio,C:/Users/Camilo/Documents/USB,investigacion 2013"
-options "bibtotoc,plain"
+options "plain"
 
 \end_inset
 

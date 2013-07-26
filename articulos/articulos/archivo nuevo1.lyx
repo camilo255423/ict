@@ -576,5 +576,93 @@ reference "fig:Arquitectura-Cordova"
  con su respectivo API.
 \end_layout
 
+\begin_layout Subsubsection
+
+\lang spanish
+Sistemas operativos y dispositivos soportados
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename phonegap_caracterбsticas.PNG
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\lang spanish
+Características y Sistemas operativos soportados por PhoneGap
+\begin_inset CommandInset citation
+LatexCommand cite
+key "phonegapsite"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang spanish
+Herramientas de desarrollo
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+PhoneGap dispone de 2 opciones de desarrollo: Una en línea a través del
+ sitio PhoneGap Build y la otra usando los respectivos IDE de desarrollo
+ para cada una de las plataformas de los sistemas operativos.
+ En el primer caso, la aplicación se desarrolla en Html5 y Javascript ubicando
+ el código del repositorio GitHub.
+ A partir de este , PhoneGap build se conecta y genera la aplicación para
+ los distintos sistemas operativos.
+ Para la segunda opción se debe descargar las distintas bibliotecas nativas
+ de phonegap, y desarrollar con las respectivas herramientas de desarrollo.
+ Por ejemeplo, para Android se necesitan las bibliotecas phoneGap para android,
+ el sdk de android , el emulador y un IDE de desarrollo como eclipse.
+ Para IPhone se utiliza, las librerías phoneGap para IPhone, el sdk y XProject
+ como IDE de desarrollo.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Recientemente se ha desarrollado un plugin para recibir notificaciones(push
+ notifications) , sin embargo el desarrollo está en pruebas y solo funciona
+ para los sistemas Android y IOS.
+\end_layout
+
 \end_body
 \end_document
