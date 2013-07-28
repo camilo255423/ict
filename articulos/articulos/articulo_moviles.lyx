@@ -1076,11 +1076,11 @@ Es un Framework para el desarrollo de aplicaciones para dispositivos móviles
  desarrollado por IBM, el cual se compone de cuatro herramientas: IBM Worklight
  Studio la cual corresponde a un entorno de desarrollo basado en Eclipse;
  IBM Worklight Device Runtime Components la cual permite tener facilidad
- en tiempo de ejecución del aplicativo desarrollado en el componente de
+ en tiempo de ejecución del aplicativo desarrollado con el componente de
  Hardware (dispositivo móvil); IBM Worklight Server que corresponde al servidor
  utilizado por el framework el cual está basado en Java; Finalmente, IBM
- Worklight Console, herramienta catalogada como interfaz de usuario que
- permite controlar la totalidad de las aplicaciones móviles.
+ Worklight Console, herramienta de interfaz de usuario que permite controlar
+ la totalidad de las aplicaciones móviles.
  
 \end_layout
 
@@ -1146,8 +1146,8 @@ key "IBMWorklight"
 
 \begin_layout Standard
 El framework en mención está desarrollado para operar en ambiente Windows
- y Linux, dentro de lo que se destacan tres alternativas para ser adquiridas,
- las cuales no son de acceso gratuito.
+ y Linux.
+ Este software es pago.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1169,13 +1169,11 @@ En su estructura administra archivos comunes para los sistemas operativos
  que soportan las aplicaciones desarrolladas bajo este framework, estos
  archivos se almacenan en una carpeta llamada “common”, y cuenta además
  con archivos propios para cada Sistema Operativo, los cuales se almacenan
- en carpetas que tienen el nombre del S.O.
- relacionado, por ejemplo la carpeta que administra los archivos para el
- desarrollo bajo iOS se denomina iphone y de esta manera para todos los
- S.O.
- soportados.
- Tiene como elementos complementarios un posible apoyo en herramientas como
- JQuery para móviles (JQuery Mobile), Secha Touch y Dojo también para móviles
+ en carpetas que tienen el nombre del Sistema Operativo relacionado.
+ Por ejemplo, la carpeta que administra los archivos para el desarrollo
+ bajo iOS se denomina iphone.
+ Tiene como elementos complementarios apoyo en herramientas como JQuery
+ para móviles (JQuery Mobile), Sencha Touch y Dojo también para móviles
  (Dojo Mobile).
  
 \end_layout
@@ -1187,11 +1185,11 @@ Características adicionales
 \begin_layout Standard
 Cuenta con manejo de notificaciones para las API de los dispositivos móviles
  y Apple push notification.
- Costo Dichas alternativas tienen un costo de 163 dólares, 38400 dólares
- y 168000 dólares (con disponibilidad para ambas plataformas).
+ Dichas alternativas tienen un costo de 163 dólares, 38400 dólares y 168000
+ dólares (con disponibilidad para ambas plataformas).
  Cuentan a su vez con una versión de prueba gratuita la cual es denominada
- Worklight Develop Edition 5.0, es reconocida como una versión de evaluación
- que busca ser retroalimentada por los usuarios a IBM de manera directa.
+ Worklight Develop Edition 5.0, versión de evaluación que busca ser retroalimenta
+da por los usuarios a IBM de manera directa.
 \end_layout
 
 \begin_layout Subsection
@@ -1200,7 +1198,7 @@ MOSYNC
 
 \begin_layout Standard
 Este framework permite desarrollar aplicaciones que se ejecutan en dispositivos
- móviles el cual está separado por dos categorías a saber, el SDK y el Reload.
+ móviles el cual está separado por dos categorías a saber: el SDK y el Reload.
 \end_layout
 
 \begin_layout Subsubsection
