@@ -1173,8 +1173,8 @@ En su estructura administra archivos comunes para los sistemas operativos
  Por ejemplo, la carpeta que administra los archivos para el desarrollo
  bajo iOS se denomina iphone.
  Tiene como elementos complementarios apoyo en herramientas como JQuery
- para móviles (JQuery Mobile), Secha Touch y Dojo también para móviles (Dojo
- Mobile).
+ para móviles (JQuery Mobile), Sencha Touch y Dojo también para móviles
+ (Dojo Mobile).
  
 \end_layout
 
@@ -1185,20 +1185,37 @@ Características adicionales
 \begin_layout Standard
 Cuenta con manejo de notificaciones para las API de los dispositivos móviles
  y Apple push notification.
- Costo Dichas alternativas tienen un costo de 163 dólares, 38400 dólares
- y 168000 dólares (con disponibilidad para ambas plataformas).
+ Dichas alternativas tienen un costo de 163 dólares, 38400 dólares y 168000
+ dólares (con disponibilidad para ambas plataformas).
  Cuentan a su vez con una versión de prueba gratuita la cual es denominada
- Worklight Develop Edition 5.0, es reconocida como una versión de evaluación
- que busca ser retroalimentada por los usuarios a IBM de manera directa.
+ Worklight Develop Edition 5.0, versión de evaluación que busca ser retroalimenta
+da por los usuarios a IBM de manera directa.
 \end_layout
 
 \begin_layout Subsection
 MOSYNC
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:MOSYNC"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Este framework permite desarrollar aplicaciones que se ejecutan en dispositivos
- móviles el cual está separado por dos categorías a saber, el SDK y el Reload.
+ móviles el cual está separado por dos categorías a saber: el SDK y el Reload.
+ La principal diferencia es que la primera permite el desarrollo de aplicaciones
+ nativas e híbridas, mientras la segunda solo permite el desarrollo de aplicacio
+nes híbridas(ver tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:mosync-de-versiones"
+
+\end_inset
+
+)f.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1207,8 +1224,8 @@ Arquitectura
 
 \begin_layout Standard
 MoSync cuenta con características básicas de la arquitectuda Apache Cordova,
- pero tiene un salto para permitir la interacción con el lenguaje C/C++,
- buscando facilitar las aplicaciones híbridas.
+ sin embargo permite la interacción con el lenguaje C/C++, buscando facilitar
+ las aplicaciones híbridas.
 \end_layout
 
 \begin_layout Standard
@@ -1256,9 +1273,9 @@ key "MoSyncArchitecture"
 
 \begin_layout Standard
 Dentro de las características propias de la arquitectura, se puede hacer
- referencia en la imagen a la sección llamada VM Core, esta corresponde
- a una Máquina Virtual, que permite leer, ejecutar e interpretar de manera
- directa el código en bytes directo con que cuenta el Framework MoSync.
+ referencia en la imagen a la sección llamada VM Core.
+ Esta corresponde a una Máquina Virtual, que permite leer, ejecutar e interpreta
+r de manera directa el código en bytes con el que cuenta el Framework MoSync.
  
 \end_layout
 
@@ -1275,7 +1292,7 @@ Sistemas Operativos y dispositivos soportados
 
 \begin_layout Standard
 Permite compilar las aplicaciones en nueve plataformas distintas, Moblin,
- Blackberry, Windows Phone, Windows, iOS, Android, Java, Meego y Symbian;
+ Blackberry, Windows Phone, Windows, iOS, Android, JavaME, Meego y Symbian;
  estas plataformas utilizan el mismo código base del framework, lo cual
  minimizaría los ajustes en el aplicativo buscando mayor cubrimiento en
  los usuarios.
@@ -1297,7 +1314,7 @@ Permite trabajar aplicaciones en los lenguajes HTML 5, CSS, JavaScript y
  Con la versión SDK (Software Development Kit) facilita la creación de aplicacio
 nes mutiplataforma utilizando las tecnologías de los lenguajes C/C++ o HTML
  5/JavaScript, aunque también permite crear aplicaciones híbridas combinando
- las prestancias de los lenguajes mencionados previamente.
+ las ventajas de los lenguajes mencionados previamente.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1603,6 +1620,13 @@ Windows, iOS X
 
 \begin_layout Plain Layout
 Comparación de versiones de MoSync
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:mosync-de-versiones"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1623,8 +1647,22 @@ CODENAME ONE
 Codename one es un framework perteneciente a la empresa que lleva el mismo
  nombre.
  Este framework permite el desarrollo de aplicaciones multiplataforma y
- ofrece la posibilidad de crear aplicaciones nativas, a diferencia de otros
- frameworks explicados en este documento, como Phonegap.
+ ofrece la posibilidad de crear aplicaciones nativas, similar a Mosync(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:MOSYNC"
+
+\end_inset
+
+), y a diferencia de otros frameworks explicados en este documento, como
+ Phonegap(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:PhoneGap:"
+
+\end_inset
+
+).
  Las aplicaciones son desarrolladas en lenguaje java utilizando un plugin
  para los IDE netbeans o eclipse, y convertidas a código para Dalvik en
  Android, MIDP+JSR's en J2ME, RIM API en Blackberry, Objective C en iOS
@@ -1706,8 +1744,9 @@ Este framework permite escribir las aplicaciones con Java, utilizando netbeans
  otras alternativas con características similares.
  Cuenta con una API Java especial para Codename One para soportar aspectos
  de interfaz en las aplicaciones, además de permitir la compilación de los
- archivos en los servidores empresariales, essto es posible por la existencia
- de un plugin que envía los archivos a dicho servidor desde netbeans o eclipse.
+ archivos en los servidores empresariales.
+ Esto es posible por la existencia de un plugin que envía los archivos a
+ dicho servidor desde netbeans o eclipse.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1729,22 +1768,7 @@ AMPCHROMA
 
 \begin_layout Standard
 Antenna Software es la empresa que desarrolla este framework.
- De acuerdo con esta organización, su producto ha estado seleccionado como
- líder en plataformas para desarrollo de aplicaciones móviles (esto de acuerdo
- con 
-\begin_inset Quotes eld
-\end_inset
-
-Gartner's Magic Quadrant
-\begin_inset Quotes erd
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-AMP significa Antenna Mobility Platform y su framework incluye características
+ AMP significa Antenna Mobility Platform y su framework incluye características
  de integración de aplicativos existentes como CRM (Customer Relationship
  Management) y ERP (Enterprise Resourcing Planning), lo que ofrece una caracterí
 stica propia a este producto.
@@ -1758,11 +1782,11 @@ Arquitectura
 \begin_layout Standard
 Para la construcción de los aplicativos, este framework tiene cuatro módulos
  base, el llamado AMP Studio que es el conjunto de herramientas para el
- desarrollo de aplicaciones nativas, está el AMP Client donde se escribe
+ desarrollo de aplicaciones nativas; está el AMP Client donde se escribe
  cualquier tipo de aplicación por una sola vez (web, nativa, híbrida); el
  AMP Server facilita el acceso de usuarios móviles a sistemas empresariales
  y ofrece mensajes con conexión segura a la aplicación ofreciendo servicios
- gateway y finalmente el AMP Manager el cual es una consola basada en servicios
+ gateway; y finalmente el AMP Manager el cual es una consola basada en servicios
  web donde se permite la administración y el control de manera remota a
  aplicaciones, dispositivos, usuarios y contenidos.
 \end_layout
@@ -1794,7 +1818,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Modelo de funcionamiento del AMP Chroma 
+Modelo de funcionamiento del AMPChroma 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "AMPChromaArc"
@@ -1819,7 +1843,8 @@ Sistemas Operativos y dispositivos soportados
 \end_layout
 
 \begin_layout Standard
-Este framework es compatible con Android y con iOS
+Este framework permite desarrollos para Android, iOS, blackberry y Windows
+ Mobile.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1916,7 +1941,10 @@ DEBILIDADES
 \begin_inset Text
 
 \begin_layout Plain Layout
-El servicio de notificaciones está limitado a Andriod y a iOS 
+El servicio de notificaciones está limitado a Andriod y a iOS.
+ No permite desarrollo multiplataforma de aplicaciones nativas, solamente
+ híbridas.
+ 
 \end_layout
 
 \end_inset
@@ -1957,8 +1985,8 @@ AMENAZAS
 \begin_inset Text
 
 \begin_layout Plain Layout
-Precio variable de acuerdo al número de aplicaciones, evento que puede disminuir
- el interés por el producto 
+Precio variable de acuerdo con el número de aplicaciones, evento que puede
+ disminuir el interés por el producto 
 \end_layout
 
 \end_inset
@@ -1978,7 +2006,7 @@ FORTALEZAS
 \begin_inset Text
 
 \begin_layout Plain Layout
-Dueño de la arquitectura cordova, elemento en el que se basan otros frameworks,
+Utiliza la arquitectura cordova, elemento en el que se basan otros frameworks,
  lo que lo hace pionero en arquitectura
 \end_layout
 
@@ -2064,7 +2092,14 @@ DEBILIDADES
 \begin_inset Text
 
 \begin_layout Plain Layout
-N/A 
+El desarrollador debe conocer el lenguaje Ruby y estar familiarizado con
+ el patrón de desarrollo MVC y el framework Ruby on Rails.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Las aplicaciones producidas son híbridas y no nativas.
+ 
 \end_layout
 
 \end_inset
@@ -2084,10 +2119,9 @@ OPORTUNIDADES
 \begin_inset Text
 
 \begin_layout Plain Layout
-Generar las aplicaciones con Ruby hace que la tecnología de las mismas sea
- igual a la empleada en los procesos cliente servidor como los sitios web
- desarrollados en PHP o JSP, esto puede generar credibilidad en el desarrollador
- 
+Generar las aplicaciones con un framework similar a Ruby on rails bajo MVC
+ hace que la tecnología de las mismas sea igual a la empleada en cualquir
+ aplicación web cliente-servidor bajo MVC.
 \end_layout
 
 \end_inset
@@ -2107,8 +2141,9 @@ FORTALEZAS
 \begin_inset Text
 
 \begin_layout Plain Layout
-Maneja un tipo de arquitectura clásica que ha sido demostrada en distintos
- escenarios tecnológicos (Modelo Vista Controlador) 
+Maneja un tipo de arquitectura (Modelo Vista Controlador) , la cual es la
+ arquitectura más empleada en la actualidad para el desarrollo de aplicaciones
+ web.
 \end_layout
 
 \end_inset
@@ -2129,7 +2164,8 @@ AMENAZAS
 
 \begin_layout Plain Layout
 Versión empresarial con costo, lo cual puede minimizar la cantidad de usuarios
- que se inclinen por el aprendizaje de este servicio 
+ que se inclinen por el aprendizaje de este servicio.
+ 
 \end_layout
 
 \end_inset
@@ -2214,7 +2250,9 @@ DEBILIDADES
 
 \begin_layout Plain Layout
 La versión descargable no tiene entorno gráfico para el desarrollo con HTML
- 5 y JavaScript 
+ 5 y JavaScript.
+ Sólo se pueden desarrollar aplicaciones híbridas.
+ 
 \end_layout
 
 \end_inset
@@ -2551,7 +2589,8 @@ FORTALEZAS
 
 \begin_layout Plain Layout
 Manejo de lenguaje JavaScript, HTML 5, CSS y C/C++ permite más opciones
- en la programación de aplicativos 
+ en la programación de aplicativos , permitiendo desarrollar tanto aplicaciones
+ nativas como aplicaciones híbridas.
 \end_layout
 
 \end_inset
@@ -2657,7 +2696,9 @@ DEBILIDADES
 
 \begin_layout Plain Layout
 No manejar el lenguaje HTML 5, lo que reduce el tipo de aplicaciones a desarroll
-arse 
+arse.
+ Se desarrolla exlusivamente en JAVA.
+ 
 \end_layout
 
 \end_inset
@@ -2699,7 +2740,8 @@ FORTALEZAS
 
 \begin_layout Plain Layout
 Estandarización del lenguaje java, que facilita la portabilidad de los aplicativ
-os 
+os.
+ Crea aplicaciones nativas.
 \end_layout
 
 \end_inset
