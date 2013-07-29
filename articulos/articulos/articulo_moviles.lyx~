@@ -2,8 +2,12 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass article
+\textclass IEEEtran
 \use_default_options true
+\begin_modules
+eqs-within-sections
+figs-within-sections
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -25,6 +29,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -77,7 +82,12 @@ Ing.
 \begin_layout Abstract
 
 \lang spanish
-El presente documento
+El presente documento presenta una revisión de algunos de los frameworks
+ utilizados para crear aplicaciones multiplataforma.
+ Se hace revisión de aquellos frameworks que crean aplicaciones nativas
+ o híbridas para al menos 4 sistemas operativos.
+ Se describen las caracteristicas , se realiza una comparación entre estos
+ y se presentan las conclusiones del trabajo.
 \end_layout
 
 \begin_layout Keywords
@@ -103,13 +113,13 @@ Actualmente uno de los principales problemas que enfrentan los desarrolladores
  En los últimos años han comenzado a aparecer frameworks que permiten desarrolla
 r la aplicación una vez y generarla automáticamente para cada una de las
  plataformas.
- Han aparecido varias alternativas y aún se encuentran en étapa de desarrollo
+ Han aparecido varias alternativas y aún se encuentran en etapa de desarrollo
  muchas de estas, siendo este un campo aún muy reciente.En muchas ocasiones
- los desarrolladores no se saben cual usar o incluso si se debe usar o no
- una de estas herramientas.
- Por esta razón este documento se propone hacer una breve revisión y explicación
- de estas nuevas tecnologías describiendo caracteristicas, arquitecturas
- , ventajas y desventajas.
+ los desarrolladores no saben cual usar o incluso si se debe usar o no una
+ de estas herramientas.
+ Por esta razón, en este documento se propone hacer una breve revisión y
+ explicación de estas nuevas tecnologías describiendo caracteristicas, arquitect
+uras, ventajas y desventajas.
  Este documento se encuentra organizado de la siguiente forma: En la sección
  
 \begin_inset CommandInset ref
@@ -183,8 +193,8 @@ key "citeulike:4633645"
 .
  Un dominio particular es la creación de código reutilizable en cualquier
  plataforma de hardware/software.
- La creciente diversidad de arquitecturas de harware y de software , sistemas
- operativos, y plataformas de comunicaciones hacen difícil la implementación
+ La creciente diversidad de arquitecturas de harware y de software, sistemas
+ operativos y plataformas de comunicaciones hacen difícil la implementación
  de manera directa
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -195,7 +205,7 @@ key "Fayad:1999:BAF:326112"
 .
  En este dominio de aplicación se ubican las aplicaciones para dispositivos
  móviles, debido a que cada dispositivo tiene un arquitectura de hardware
- y software específica, y un lenguaje de programación diferente (a manera
+ y software específica y un lenguaje de programación diferente (a manera
  de ilustración se presentan algunas de los sistemas operativos más comunes
  para dispositivos móviles y su respectivo lenguaje de desarrollo en la
  Figura 
@@ -286,9 +296,9 @@ Desarrollar una aplicación web que se ejecute en el navegador del dispositivo
 \begin_layout Itemize
 
 \lang spanish
-Desarrollar una aplicación en código nativo para cada plataforma para lo
- cual se debe utilizar un lenguaje y una herramienta de desarrollo particular
- para cada caso tal como se presenta en la tabla 
+Desarrollar una aplicación en código nativo para cada plataforma, evento
+ en el que se debe utilizar un lenguaje y una herramienta de desarrollo
+ particular para cada caso, tal como se presenta en la tabla 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Lenguajes-de-Programación"
@@ -312,7 +322,7 @@ La primera aproximación tiene la ventaja de que la aplicación se ejecuta
  en el navegador de cada dispositivo haciéndola independiente de plataforma.
  El desarrollador crea una única versión utilizando html y javascript como
  cualquier otra aplicación web que se ejecuta en el lado del cliente.
- Sin embargo, tiene como desventajas que nos todos los controles Html funcionan
+ Sin embargo, tiene como desventajas que no todos los controles Html funcionan
  de la misma manera en todos los disposivitos para móviles ni tampoco las
  dimensiones de los componentes de la aplicación se ajustan de manera correcta
  a las pantallas de los dispositivos.
@@ -325,9 +335,9 @@ La primera aproximación tiene la ventaja de que la aplicación se ejecuta
 
 \lang spanish
 La segunda aproximación tiene la ventaja de que al desarrollar específicamente
- para una plataforma se pueden utilizar todos los recursos del sistema operativo
- y del dispositivo, además de usar todos los controles específicos para
- dicho dispositivo.
+ para una plataforma, se pueden utilizar todos los recursos del sistema
+ operativo y del dispositivo, además de usar todos los controles específicos
+ para dicho dispositivo.
  La desventaja es que el desarrollador debe crear una versión de la aplicación
  para cada plataforma.
 \end_layout
@@ -347,7 +357,7 @@ reference "fig:Comparación-entre-las"
 
  presenta una breve comparación entre los tipos de desarrollo.
  Este documento se enfoca en los frameworks que permiten crear aplicaciones
- hírbridas o aplicaciones nativas, ya que el uso de frameworks bajo el primera
+ híbridas o aplicaciones nativas, ya que el uso de frameworks bajo la primera
  aproximación, es decir la web, mantiene las mismas características de una
  aplicación cliente usual.
 \end_layout
@@ -423,12 +433,12 @@ name "sec:Características-de-los"
 \begin_layout Standard
 
 \lang spanish
-Se eligieron los frameworks a estudiar basado en dos aspectos: Primero,
+Se eligieron los frameworks a estudiar tomando como base dos aspectos: Primero,
  que el framework permita generar aplicaciones para varias plataformas,
  y segundo que la aplicación sea híbrida o nativa, de tal manera que se
  pueda generar una aplicación móvil como tal y no una aplicación web.
  Los frameworks seleccionados generan aplicaciones para las 4 plataformas
- más utilizadas en la actualidad: IPhone, Android, Windows Phone y Hewelette
+ más utilizadas en la actualidad: IPhone, Android, Windows Phone y Hewlett
  Packard.
  
 \end_layout
@@ -459,7 +469,7 @@ name "sub:PhoneGap:"
 PhoneGap se desarrolló originalmente por la empresa Nitobi en 2011 y fue
  adquirido posteriormente por Adobe, liberando el código bajo el proyecto
  Apache Cordova.
- En otras palabras , el producto que pertenece a Adobe se denomina actualmente
+ En otras palabras, el producto que pertenece a Adobe se denomina actualmente
  PhoneGap y el proyecto de código abierto se denomina Cordova.
  Varios de los framework descritos en este documento utilizan Cordova.
  El objetivo de este framework es permitir desarrollar aplicaciones embebidas
@@ -472,10 +482,10 @@ key "Ghatol:2012:BPM:2331456"
 
 .
  Phone Gap Build ofrece varios tipos de plan pagos.
- Debido a qué el código se compila a través de gitHub , el derecho a que
+ Debido a que el código se compila a través de gitHub, el derecho a que
  el código sea privado depende del precio del plan.
  La versión gratuita permite una sola aplicación privada y la paga va desde
- USD $120 a $900 por año, dependiendo del número de aplicaciones.
+ USD $120 a USD $900 por año, dependiendo del número de aplicaciones.
 \end_layout
 
 \begin_layout Subsubsection
@@ -588,7 +598,7 @@ key "Bakker2011"
 
 \lang spanish
 Cordova está compuesto por un API en javascript y un API en código nativo
- para cada uno de los sistemas operativos que soporta (Figura 
+ para cada uno de los Sistemas Operativos que soporta (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Arquitectura-Cordova"
@@ -597,8 +607,8 @@ reference "fig:Arquitectura-Cordova"
 
 ).
  La aplicación se ejecuta en un componente denominado webview, el cual contiene
- el la aplicación desarrollada en html5 y javascript la cual se comunica
- que con el API javascript de Cordova.
+ la aplicación desarrollada en html5 y javascript, la cual se comunica que
+ con el API javascript de Cordova.
  Este a su vez se comunica con el API de código nativo (Por ejemplo, java,
  para el caso de Android o Objective C, en el caso de IPhone).
  Esto implica que cada aplicación se debe recompilar para cada sistema operativo
@@ -674,15 +684,15 @@ PhoneGap dispone de 2 opciones de desarrollo: Una en línea, a través del
  sitio PhoneGap Build, y la otra usando los respectivos IDE de desarrollo
  para cada una de las plataformas de los sistemas operativos.
  En ambos casos la aplicación se desarrolla en Html5 y Javascript.
- Sin embargo , para utilizar la versión en línea, el codigo se debe subir
+ Sin embargo, para utilizar la versión en línea, el código se debe subir
  al repositorio GitHub.
- A partir de este , PhoneGap build se conecta y genera la aplicación para
- los distintos sistemas operativos.
- En la segunda opción, se debe descargar las distintas bibliotecas nativas
+ A partir de este, PhoneGap build se conecta y genera la aplicación para
+ los distintos Sistemas Operativos.
+ En la segunda opción, se deben descargar las distintas bibliotecas nativas
  de phonegap, y utilizar las respectivas herramientas de desarrollo.
  Por ejemplo, para Android se necesitan las bibliotecas phoneGap para android,
  el sdk de android y un IDE de desarrollo como eclipse.
- Para IPhone se utiliza, las librerías phoneGap para IPhone, el sdk y XProject
+ Para IPhone se utilizan, las librerías phoneGap para IPhone, el sdk y XProject
  como IDE de desarrollo.
 \end_layout
 
@@ -722,8 +732,8 @@ key "Allen:2010:PSC:1869934"
  Javascript y Ruby siguiendo la filosofía de la arquitectura MVC(Modelo-Vista-Co
 ntrolador) utilizada en Ruby on Rails.
  Las vistas, es decir la interfaz de la aplicación, se generan utilizando
- html5, javascript y ERB(Embedded Ruby), tal y como se generan páginas utilizand
-o lenguajes del lado del servidor con PHP o JSP.
+ html5, javascript y ERB (Embedded Ruby), tal y como se generan páginas
+ utilizando lenguajes del lado del servidor con PHP o JSP.
  Las solicitudes del cliente se procesan por medio de controladores y el
  acceso a datos por medio de los modelos
 \begin_inset CommandInset citation
@@ -741,9 +751,9 @@ reference "fig:Arquitectura-Rhodes-"
 
 \end_inset
 
-) .
+).
  Si bien Rhodes se puede descargar de manera gratuita, Motorola también
- ofrece una versión empresarial con soporte que cuesta $500 y el servidor
+ ofrece una versión empresarial con soporte que cuesta USD $500 y el servidor
  Rhode RhoSync, el cual se explica en la sección 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -751,7 +761,7 @@ reference "sub:Características-Adicionales"
 
 \end_inset
 
-, a un precio de $ 5000 por 100 usuarios conectados.
+, a un precio de USD $5000 por 100 usuarios conectados.
 \end_layout
 
 \begin_layout Standard
@@ -1005,7 +1015,7 @@ reference "sub:PhoneGap:"
 ), Rhodes dispone de una aplicación para compilar en línea denominada RhodeHub.
  También ofrece una versión de eclipse modificada para el uso de Rhodes
  denominada RhodesStudio con la cual se puede generar una aplicación para
- cualquier sistema operativo que soporta este framework
+ cualquier Sistema Operativo que soporta este framework
 \end_layout
 
 \begin_layout Subsubsection
@@ -1030,8 +1040,9 @@ Motorola ofrece una herramienta denominada Rhode Sync, el cual es un servidor
  como si fuera de manera local.
  El servidor RhoSync actúa como capa intermedia entre la aplicación móvil
  y el servicio web el cual accede a los datos remotos.
- El servidor RhoSync almacena informacióndesde el back-end del sistema como
- tripletas (OAV) objeto -atributo-valor capaz de representar cualquier dato
+ El servidor RhoSync almacena información desde el back-end del sistema
+ como tripletas (OAV) objeto -atributo-valor capaz de representar cualquier
+ dato
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Allen:2010:PSC:1869934"
@@ -1059,10 +1070,10 @@ reference "sub:PhoneGap:"
 \end_inset
 
 de este documento.
- Este framework solo ofrece una versión para compilar en línea la cual cuesta
- $ 14 por mes, y una versión empresarial descargable.
- SIn embargo la versión en línea ofrece un entorno gráfica de desarrollo
- para Html5 y javascript, no solo para el proceso de compilación como es
+ Este framework sólo ofrece una versión para compilar en línea la cual cuesta
+ USD $14 por mes, y una versión empresarial descargable.
+ Sin embargo la versión en línea ofrece un entorno gráfico de desarrollo
+ para Html5 y javascript, no sólo para el proceso de compilación como es
  el caso de PhoneGap Build.
  
 \end_layout
@@ -1078,7 +1089,7 @@ Es un Framework para el desarrollo de aplicaciones para dispositivos móviles
  IBM Worklight Device Runtime Components la cual permite tener facilidad
  en tiempo de ejecución del aplicativo desarrollado con el componente de
  Hardware (dispositivo móvil); IBM Worklight Server que corresponde al servidor
- utilizado por el framework el cual está basado en Java; Finalmente, IBM
+ utilizado por el framework, el cual está basado en Java; Finalmente, IBM
  Worklight Console, herramienta de interfaz de usuario que permite controlar
  la totalidad de las aplicaciones móviles.
  
@@ -1089,7 +1100,8 @@ Arquitectura
 \end_layout
 
 \begin_layout Standard
-IBM Worklight funciona bajo la arquitectura Apache Cordova(ver sección 
+IBM Worklight funciona bajo la arquitectura Apache Cordova (ver sección
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:PhoneGap:"
@@ -1097,7 +1109,7 @@ reference "sub:PhoneGap:"
 \end_inset
 
 ), facilitando el desarrollo de aplicaciones nativas mediante el uso de
- tecnologías como HTML 5, CSS y JavaScript.
+ tecnologías como HTML5, CSS y JavaScript.
  
 \end_layout
 
@@ -1155,7 +1167,7 @@ Sistemas Operativos y dispositivos soportados
 \end_layout
 
 \begin_layout Standard
-Los desarrollos en Worklight cuentan con soporte para los sistemas operativos
+Los desarrollos en Worklight cuentan con soporte para los Sistemas Operativos
  iOS, Android, Blackberry y Windows Phone.
  
 \end_layout
@@ -1165,7 +1177,7 @@ Herramientas de desarrollo
 \end_layout
 
 \begin_layout Standard
-En su estructura administra archivos comunes para los sistemas operativos
+En su estructura administra archivos comunes para los Sistemas Operativos
  que soportan las aplicaciones desarrolladas bajo este framework, estos
  archivos se almacenan en una carpeta llamada “common”, y cuenta además
  con archivos propios para cada Sistema Operativo, los cuales se almacenan
@@ -1207,15 +1219,15 @@ name "sub:MOSYNC"
 Este framework permite desarrollar aplicaciones que se ejecutan en dispositivos
  móviles el cual está separado por dos categorías a saber: el SDK y el Reload.
  La principal diferencia es que la primera permite el desarrollo de aplicaciones
- nativas e híbridas, mientras la segunda solo permite el desarrollo de aplicacio
-nes híbridas(ver tabla 
+ nativas e híbridas, mientras la segunda sólo permite el desarrollo de aplicacio
+nes híbridas (ver tabla 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:mosync-de-versiones"
 
 \end_inset
 
-)f.
+).
 \end_layout
 
 \begin_layout Subsubsection
@@ -1223,7 +1235,7 @@ Arquitectura
 \end_layout
 
 \begin_layout Standard
-MoSync cuenta con características básicas de la arquitectuda Apache Cordova,
+MoSync cuenta con características básicas de la arquitectura Apache Cordova,
  sin embargo permite la interacción con el lenguaje C/C++, buscando facilitar
  las aplicaciones híbridas.
 \end_layout
@@ -1676,7 +1688,6 @@ Arquitectura
 \begin_layout Standard
 Una de las principales características de este framework es la utilización
  de su tecnología desde la nube.
- .
  El código resultante se compila en los servidores propios de la empresa
  dentro del contexto de la nube y el resultado es un producto portable que
  permite su ejecución en distintas plataformas.
@@ -1763,7 +1774,7 @@ Las herramientas para desarrollar son totalmente libres, pero hay que pagar
 \end_layout
 
 \begin_layout Section
-compración entre los frameworks
+compAración entre los frameworks
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:compración-entre-los"
@@ -1774,15 +1785,15 @@ name "sec:compración-entre-los"
 \end_layout
 
 \begin_layout Standard
-De acuerdo con lo analizado se puede establecer algunos elementos diferenciadore
-s para cada framework, los cuales se clasifican en Debilidades, Oportunidades,
+De acuerdo con lo analizado, se pueden establecer algunos elementos diferenciado
+res para cada framework, los cuales se clasifican en Debilidades, Oportunidades,
  Fortalezas y Amenazas.
  Esta serie de condiciones pueden permitir establecer criterios de selección
  en el momento de elegir una herramienta para el desarrollo en dispositivos
  móviles.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Phonegap
 \end_layout
 
@@ -1933,7 +1944,7 @@ DOFA para Phonegap
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Rhodes
 \end_layout
 
@@ -2091,7 +2102,7 @@ DOFA para Rhodes
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Application Craft
 \end_layout
 
@@ -2240,7 +2251,7 @@ DOFA para Application Craft
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Worklight
 \end_layout
 
@@ -2392,7 +2403,7 @@ DOFA para Worklight
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 MoSync
 \end_layout
 
@@ -2540,7 +2551,7 @@ DOFA para MoSync
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Codename One
 \end_layout
 
@@ -2702,54 +2713,59 @@ name "sec:Conclusiones-y-trabajo"
 \end_layout
 
 \begin_layout Standard
-Se revisaron los principales framework para el desarrollo de aplicaciones
+Se revisaron los principales frameworks para el desarrollo de aplicaciones
  móviles multiplataforma.
  Dentro de la revisión hecha se pueden agrupar las aplicaciones en 2 categorías:
- Los que permiten desarrollar aplicaciones híbridas mediante Html5 y un
- componente para integracion con el código nativo que por lo general lo
- provee el framework y los que permiten escribir la aplicación una vez en
- un único lenguaje y generar la aplicación para código nativo para cada
+ Los que permiten desarrollar aplicaciones híbridas mediante Html 5 y algún
+ componente de software que provee el framework para crear una integracion
+ con el código nativo y los que permiten escribir la aplicación una vez
+ en un único lenguaje y generar la aplicación en código nativo para cada
  una de las plataformas.
- Del primer grupo se encuentra PhoneGap, Rhodes, Application Craft y WorkLight.
+ Dentro del primer grupo se encuentran PhoneGap, Rhodes, Application Craft
+ y WorkLight.
  Dentro del segundo grupo se encuentra Mosync y Code Name One.
- Varios de los Frameworks utilizan el código abierto apace cordova, el cual
- permite crear aplicaciones híbridas.
- Dentro de estos frameworks se encuentran WorkLight, PhoneGap y Application
+ Varios de los frameworks revisados utilizan el código abierto Apache Cordova,
+ el cual permite crear aplicaciones híbridas: WorkLight, PhoneGap y Application
  Craft.
  
 \end_layout
 
 \begin_layout Standard
 La revisión arroja una amplia variedad de frameworks con características
- diferentes a tener encuenta al momento de desarrollar una aplicación multiplata
-forma.
+ diferentes a tener encuenta en el momento de desarrollar una aplicación
+ multiplataforma.
  Si la aplicación que se desea desarrollar no requiere que sea una aplicación
- 100% nativa (por ejemplo, por razones de tiempo de respuesta), y es una
- aplicación sencilla que no interactúa con otros servicios de software en
- la red, se puede desarrollar utlizando algunos de los framework que permiten
- crear aplicaciones híbridas basadas, por ejemplo en el código abierdo apache
- cordova, como el caso de Phone Gap, Application Craft, el cual permite
- desarrollar utilizando solo html5 y javascript.
- Si se desea un desarrollo de la aplicación con un mejor diseño arquitectónico,
- que implique almacenamiento de datos, puede pensarte en Rhodes, el cual
+ 100% nativa, y es una aplicación sencilla que no interactúa con otros servicios
+ de software en la red, se puede desarrollar utlizando algunos de los framework
+ que permiten crear aplicaciones híbridas basadas en Apache Cordova como
+ el caso de Phone Gap o Application Craft, el cual permite desarrollar utilizand
+o solo Html 5 y Javascript.
+ Si se desea un desarrollo de la aplicación con un diseño arquitectónico,
+ que implique almacenamiento de datos, puede pensarse en Rhodes, el cual
  utiliza MVC para la construcción de la aplicación.
  
 \end_layout
 
 \begin_layout Standard
-Para aplicaciones más robustas que necesiten interacción con otros sistemas
- , habría que inclinarse hacia frameworks más empresariales , como es el
- caso de IBM WorkLight, que ofrece una serie de herramientas de software
- que permiten el desarrollo de la aplicación y de componente de comunicación
+Para aplicaciones más robustas que necesiten interacción con otros sistemas,
+ habría que inclinarse hacia frameworks más empresariales, como es el caso
+ de IBM WorkLight, que ofrece una serie de herramientas de software que
+ permiten el desarrollo de la aplicación y de componentes de comunicación
  con otros sistemas.
 \end_layout
 
 \begin_layout Standard
-Para aplicaciones nativas, que se creen en único lenguaje y se generen en
- código nativo para las diferentes plataformas, Mosync o CodeNameOne son
- las opciones indicadas.
+Por otro lado, si se desea desarrollar aplicaciones nativas, que se creen
+ en único lenguaje y se generen en código nativo para las diferentes plataformas
+, Mosync o CodeNameOne son las opciones indicadas.
  La ventaja de Mosync es que permite desarrollar aplicaciones tanto nativas
- como híbridas, mientras que CodeNameOne, solo nativas.
+ como híbridas, mientras que CodeNameOne, solamente presenta la opción del
+ desarrollo de aplicaciones nativas.
+\end_layout
+
+\begin_layout Standard
+Como trabajo futuro, se desarrollarán aplicaciones en cada uno de los frameworks
+ y se compará el rendimiento en tiempo de ejecución.
 \end_layout
 
 \begin_layout Standard
