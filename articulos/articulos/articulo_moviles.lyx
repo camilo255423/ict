@@ -1762,110 +1762,6 @@ Las herramientas para desarrollar son totalmente libres, pero hay que pagar
  ya que no soporta visualización en formato 3D.
 \end_layout
 
-\begin_layout Subsection
-AMPCHROMA
-\end_layout
-
-\begin_layout Standard
-Antenna Software es la empresa que desarrolla este framework.
- AMP significa Antenna Mobility Platform y su framework incluye características
- de integración de aplicativos existentes como CRM (Customer Relationship
- Management) y ERP (Enterprise Resourcing Planning), lo que ofrece una caracterí
-stica propia a este producto.
- Es una herramienta orientada hacia las necesidades de negocios.
-\end_layout
-
-\begin_layout Subsubsection
-Arquitectura
-\end_layout
-
-\begin_layout Standard
-Para la construcción de los aplicativos, este framework tiene cuatro módulos
- base, el llamado AMP Studio que es el conjunto de herramientas para el
- desarrollo de aplicaciones nativas; está el AMP Client donde se escribe
- cualquier tipo de aplicación por una sola vez (web, nativa, híbrida); el
- AMP Server facilita el acceso de usuarios móviles a sistemas empresariales
- y ofrece mensajes con conexión segura a la aplicación ofreciendo servicios
- gateway; y finalmente el AMP Manager el cual es una consola basada en servicios
- web donde se permite la administración y el control de manera remota a
- aplicaciones, dispositivos, usuarios y contenidos.
-\end_layout
-
-\begin_layout Standard
-Utiliza la tecnología JQuery, Sercha y Dojo Mobile como elementos de soporte
- y entrada a su arquitectura.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Imagenes/AMPchroma Architecture.png
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Modelo de funcionamiento del AMPChroma 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "AMPChromaArc"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Sistemas Operativos y dispositivos soportados
-\end_layout
-
-\begin_layout Standard
-Este framework permite desarrollos para Android, iOS, blackberry y Windows
- Mobile.
-\end_layout
-
-\begin_layout Subsubsection
-Herramientas de desarrollo
-\end_layout
-
-\begin_layout Standard
-El desarrollo está basado en el uso de HTML 5, JavaScript, CSS, JQuery Mobile,
- Sencha Touch y Dojo Mobile.
-\end_layout
-
-\begin_layout Subsubsection
-Características adicionales
-\end_layout
-
-\begin_layout Standard
-Dentro de los elementos que caracterizan esta framework, se incluyen los
- metadatos para las transacciones, vista de páginas y la posibilidad de
- generación de estadísticas a través del módulo AMP Manager.
-\end_layout
-
 \begin_layout Section
 compración entre los frameworks
 \begin_inset CommandInset label
@@ -1886,7 +1782,7 @@ s para cada framework, los cuales se clasifican en Debilidades, Oportunidades,
  móviles.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Phonegap
 \end_layout
 
@@ -2037,7 +1933,7 @@ DOFA para Phonegap
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Rhodes
 \end_layout
 
@@ -2195,7 +2091,7 @@ DOFA para Rhodes
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Application Craft
 \end_layout
 
@@ -2344,7 +2240,7 @@ DOFA para Application Craft
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Worklight
 \end_layout
 
@@ -2399,7 +2295,9 @@ DEBILIDADES
 
 \begin_layout Plain Layout
 La versión libre del Framework es una versión beta que está en constante
- retroalimentación para mejorar las versiones pagas 
+ retroalimentación para mejorar las versiones pagas.
+ Sólo permite el desarrollo de aplicaciones nativas multiplataforma.
+ 
 \end_layout
 
 \end_inset
@@ -2440,8 +2338,9 @@ FORTALEZAS
 \begin_inset Text
 
 \begin_layout Plain Layout
-Arquitectura robusta (Apache cordova), multiplataforma y manejo de lenguajes
- HTML 5, CSS y JavaScript 
+IBM ofrece un conjunto de herramientas no solo para el desarrollo de la
+ aplicación, sino también para la integración con otras plataformas y servicios
+ de software.
 \end_layout
 
 \end_inset
@@ -2493,7 +2392,7 @@ DOFA para Worklight
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 MoSync
 \end_layout
 
@@ -2641,7 +2540,7 @@ DOFA para MoSync
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Codename One
 \end_layout
 
@@ -2791,158 +2690,6 @@ DOFA para Codename One
 
 \end_layout
 
-\begin_layout Subsubsection
-AMP Chroma
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="left" valignment="top" width="9cm">
-<row>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-AMP CHROMA
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DEBILIDADES
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Herramienta orientada para las soluciones empresariales.
- No se encuentran muchos detalles de la arquitectura sobre la cual funciona
- este framework.
- 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-OPORTUNIDADES
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Integración con aplicativos empresariales existentes (CRM ERP) lo cual puede
- ser benéfico para las empresas que busquen controlar y administrar su informaci
-ón a través de dispositivos móviles 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-FORTALEZAS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Cuatro módulos para la gestión de contenidos empresariales donde cuentan
- con un sistema de seguridad de los datos 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-AMENAZAS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Demasiada información empresarial y de logros (no documentada) y poca informació
-n técnica lo que puede afectar la selección como herramienta de desarrollo
- 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-DOFA para AMP Chroma
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Conclusiones y trabajo futuro
 \begin_inset CommandInset label
@@ -2952,6 +2699,62 @@ name "sec:Conclusiones-y-trabajo"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Se revisaron los principales framework para el desarrollo de aplicaciones
+ móviles multiplataforma.
+ Dentro de la revisión hecha se pueden agrupar las aplicaciones en 2 categorías:
+ Los que permiten desarrollar aplicaciones híbridas mediante Html5 y un
+ componente para integracion con el código nativo que por lo general lo
+ provee el framework y los que permiten escribir la aplicación una vez en
+ un único lenguaje y generar la aplicación para código nativo para cada
+ una de las plataformas.
+ Del primer grupo se encuentra PhoneGap, Rhodes, Application Craft y WorkLight.
+ Dentro del segundo grupo se encuentra Mosync y Code Name One.
+ Varios de los Frameworks utilizan el código abierto apace cordova, el cual
+ permite crear aplicaciones híbridas.
+ Dentro de estos frameworks se encuentran WorkLight, PhoneGap y Application
+ Craft.
+ 
+\end_layout
+
+\begin_layout Standard
+La revisión arroja una amplia variedad de frameworks con características
+ diferentes a tener encuenta al momento de desarrollar una aplicación multiplata
+forma.
+ Si la aplicación que se desea desarrollar no requiere que sea una aplicación
+ 100% nativa (por ejemplo, por razones de tiempo de respuesta), y es una
+ aplicación sencilla que no interactúa con otros servicios de software en
+ la red, se puede desarrollar utlizando algunos de los framework que permiten
+ crear aplicaciones híbridas basadas, por ejemplo en el código abierdo apache
+ cordova, como el caso de Phone Gap, Application Craft, el cual permite
+ desarrollar utilizando solo html5 y javascript.
+ Si se desea un desarrollo de la aplicación con un mejor diseño arquitectónico,
+ que implique almacenamiento de datos, puede pensarte en Rhodes, el cual
+ utiliza MVC para la construcción de la aplicación.
+ 
+\end_layout
+
+\begin_layout Standard
+Para aplicaciones más robustas que necesiten interacción con otros sistemas
+ , habría que inclinarse hacia frameworks más empresariales , como es el
+ caso de IBM WorkLight, que ofrece una serie de herramientas de software
+ que permiten el desarrollo de la aplicación y de componente de comunicación
+ con otros sistemas.
+\end_layout
+
+\begin_layout Standard
+Para aplicaciones nativas, que se creen en único lenguaje y se generen en
+ código nativo para las diferentes plataformas, Mosync o CodeNameOne son
+ las opciones indicadas.
+ La ventaja de Mosync es que permite desarrollar aplicaciones tanto nativas
+ como híbridas, mientras que CodeNameOne, solo nativas.
+\end_layout
+
+\begin_layout Standard
+Como trabajo futuro, se realizaran desarrollas en cada uno de los frameworks
+ y se compará el rendimiento en tiempo de ejecución.
 \end_layout
 
 \begin_layout Standard
