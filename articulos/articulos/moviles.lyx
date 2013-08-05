@@ -461,8 +461,7 @@ Frameworks de desarrollo de aplicaciones multiplataforma para dispositivos
 \end_layout
 
 \begin_layout Standard
-Actualmente es difícil el desarrollo de software sin el uso de un framework.
- Un framework provee una serie de estructuras de dominio y funcionalidad
+Un framework provee una serie de estructuras de dominio y funcionalidad
  específica basada en patrones.
  Los patrones codifican un diseño reutilizable de soluciones ya conocidas
  a problemas de software de determinados contextos y dominios.
@@ -481,18 +480,11 @@ key "citeulike:4633645"
 
 \end_inset
 
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bäumer_frameworkdevelopment"
-
-\end_inset
-
 .
  Un dominio particular es la creación de código reutilizable en cualquier
  plataforma de hardware/software.
- La creciente diversidad de arquitecturas de harware y de software , sistemas
- operativos, y plataformas de comunicaciones hacen difícil la implementación
+ La creciente diversidad de arquitecturas de harware y de software, sistemas
+ operativos y plataformas de comunicaciones hacen difícil la implementación
  de manera directa
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -503,7 +495,7 @@ key "Fayad:1999:BAF:326112"
 .
  En este dominio de aplicación se ubican las aplicaciones para dispositivos
  móviles, debido a que cada dispositivo tiene un arquitectura de hardware
- y software específica, y un lenguaje de programación diferente (a manera
+ y software específica y un lenguaje de programación diferente (a manera
  de ilustración se presentan algunas de los sistemas operativos más comunes
  para dispositivos móviles y su respectivo lenguaje de desarrollo en la
  Figura 
@@ -580,9 +572,9 @@ Desarrollar una aplicación web que se ejecute en el navegador del dispositivo
 \end_layout
 
 \begin_layout Itemize
-Desarrollar una aplicación en código nativo para cada plataforma para lo
- cual se debe utilizar un lenguaje y una herramienta de desarrollo particular
- para cada caso tal como se presenta en la tabla 
+Desarrollar una aplicación en código nativo para cada plataforma, evento
+ en el que se debe utilizar un lenguaje y una herramienta de desarrollo
+ particular para cada caso, tal como se presenta en la tabla 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Lenguajes-de-Programación"
@@ -598,11 +590,11 @@ Desarrollar una aplicación híbrida, la cual es una combinación de aplicación
 \end_layout
 
 \begin_layout Standard
-La primera aproximación tiene la ventaja que la aplicación se ejecuta en
- el navegador de cada dispositivo haciéndola independiente de plataforma.
- EL desarrollador crea una única versión utilizando html y javascript como
+La primera aproximación tiene la ventaja de que la aplicación se ejecuta
+ en el navegador de cada dispositivo haciéndola independiente de plataforma.
+ El desarrollador crea una única versión utilizando html y javascript como
  cualquier otra aplicación web que se ejecuta en el lado del cliente.
- Sin embargo, tiene como desventajas que nos todos los controles Html funcionan
+ Sin embargo, tiene como desventajas que no todos los controles Html funcionan
  de la misma manera en todos los disposivitos para móviles ni tampoco las
  dimensiones de los componentes de la aplicación se ajustan de manera correcta
  a las pantallas de los dispositivos.
@@ -613,20 +605,17 @@ La primera aproximación tiene la ventaja que la aplicación se ejecuta en
 
 \begin_layout Standard
 La segunda aproximación tiene la ventaja de que al desarrollar específicamente
- para una plataforma se pueden utilizar todos los recursos del sistema operativo
- y del dispositivo, además de usar todos los controles específicos para
- dicho dispositivo.
+ para una plataforma, se pueden utilizar todos los recursos del sistema
+ operativo y del dispositivo, además de usar todos los controles específicos
+ para dicho dispositivo.
  La desventaja es que el desarrollador debe crear una versión de la aplicación
  para cada plataforma.
 \end_layout
 
 \begin_layout Standard
 Las aplicaciones híbridas utilizan ambas ideas.
- Si bien se desarrolla una versión en codigo nativo para cada plataforma,
- el desarrollo se realiza utilizando código Html y lenguaje Javascript como
- si fuera una aplicación Web.
- Sin embargo, el framework es el que se encarga de transformar la aplicación
- en código específico para cada plataforma.
+ Parte de la aplicación se desarrolla con Html y Javascript y la parte de
+ la aplicación se desarrolla utilizando código nativo .
  La figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -635,9 +624,10 @@ reference "fig:Comparación-entre-las"
 \end_inset
 
  presenta una breve comparación entre los tipos de desarrollo.
- La revisión de este tipo de framework, el cual permite la generación de
- código nativo específico apartir componentes de de software reutilizable
- en un lenguaje independiente de plataforma, es el objetivo de este trabajo.
+ Este documento se enfoca en los frameworks que permiten crear aplicaciones
+ híbridas o aplicaciones nativas, ya que el uso de frameworks bajo la primera
+ aproximación, es decir la web, mantiene las mismas características de una
+ aplicación cliente usual.
 \end_layout
 
 \begin_layout Standard
@@ -646,10 +636,6 @@ placement H
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -685,10 +671,6 @@ key "Bakker2011"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
